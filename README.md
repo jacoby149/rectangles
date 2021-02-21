@@ -89,7 +89,14 @@ return {
 
 
 
-<u>Potential Rectangle Subclasses</u>
-**Button**  - Rectangle with custom hover color,on click, and a place for text/image.
-**Table** - Rectangle with a table in it, that can be converted into card stack format for mobile.
-**Text** - A rectangle that can have input text typed into it, minimalist text entry.
+<u>Helpful Built-In Additional Components</u>
+
+| Component      | Uses                                                         |
+| -------------- | ------------------------------------------------------------ |
+| **Button**     | Custom Hover, on click functionality, text/images/icons      |
+| **Logo**       | Easy to position Iconography.                                |
+| **Text**       | Easy to position and format text.                            |
+| **Input**      | Minimalist text entry field.                                 |
+| **Table/Card** | Collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format on mobile with search and sort functionality also. |
+| **Rectangles** | Rectangles are just div elements, so place whatever content you would like in them :) |
+
