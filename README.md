@@ -1,6 +1,4 @@
-# Rectangles.css — No NPM React Framework 
-
-**Rectangles.js comes with minimal MVP.css styles.**
+# Rectangles Framework 
 
 
 
@@ -21,17 +19,20 @@ The website never scrolls, rather the rectangles inside of it scroll.
 
 #### Attributes special to the Rectangle Component. 
 
-| Attributes      | Effect                                                       |
-| :-------------- | ------------------------------------------------------------ |
-| **t**           | Children float top in their parent.                          |
-| **l**           | Children float left in their parent.                         |
-| **r**           | Children float right in their parent.                        |
-| **b**           | Children float bottom in their parent.                       |
-| **c** = {bool}  | Collapse the rectangle if bool is *true*, otherwise show.    |
-| **s** = {size}  | Size of the rectangles free dimension (Any valid css size)   |
-| **ms** = {size} | Minimum size of the rectangles free dimension (Any valid css size) |
-| **ns**          | No Scroll                                                    |
-| **tel**         | Telescopic Rectangle that accommodates siblings to meet the size of the parent. |
+| Attributes     | Effect                                                       |
+| :------------- | ------------------------------------------------------------ |
+| **t**          | Children float top in their parent.                          |
+| **l**          | Children float left in their parent.                         |
+| **r**          | Children float right in their parent.                        |
+| **b**          | Children float bottom in their parent.                       |
+| **bt**         | Border top.                                                  |
+| **bb**         | Border bottom.                                               |
+| **br**         | Border right.                                                |
+| **bl**         | Border left.                                                 |
+| **c** = {bool} | Collapse the rectangle if bool hook is *true*, otherwise show. |
+| **s** = {size} | Size of the rectangles free dimension. (Any valid css size format) |
+| **ns**         | Prevent scrolling for the given rectangle.                   |
+| **tel**        | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 
 
 
@@ -39,6 +40,7 @@ The website never scrolls, rather the rectangles inside of it scroll.
 
 ```jsx
 
+/* this is pseudo codey, a real example is coming soon. */
 /* Collapsable */
 const [dash,setDash] = React.useState(true);
 function toggleDash(){setDash(!dash)};
@@ -88,6 +90,6 @@ return {
 
 
 <u>Potential Rectangle Subclasses</u>
-Button Rectangle - Rectangle with custom hover color and a place for text/image.
-Table Rectangle - Rectangle with a table in it, that can be converted into card stack format for mobile.
-Text Input Rectangle - Rectangle that can have input text typed into it, minimalist text entry.
+**Button**  - Rectangle with custom hover color,on click, and a place for text/image.
+**Table** - Rectangle with a table in it, that can be converted into card stack format for mobile.
+**Text** - A rectangle that can have input text typed into it, minimalist text entry.
