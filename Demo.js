@@ -6,7 +6,7 @@ function App(){
             <R l ns bb s={"70px"} >
                     <R l ns s={"300px"}>
                         <Logo/>
-                        <Text s = {"200px"}>Plainpad<br/> Standalone</Text>
+                        <Text s = {"200px"}><h3>Plainpad<br/> Standalone</h3></Text>
                     </R>
 
                     <R tel />
@@ -22,7 +22,7 @@ function App(){
 
                 <R t ns br s= {"270px"}>
                     <R s = {"50px"}>
-                    <Text>Search Bar</Text>    
+                    <Text><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"10em",marginLeft:"10%"}}/></Text>    
                     </R>        
                     <R tel bb bt t> 
                         <Text s={"50px"}>Note 1 :) </Text>

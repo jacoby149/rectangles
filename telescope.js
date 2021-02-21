@@ -9,10 +9,16 @@ function adjustWidth(tel){
         tel[0].width = dwidth;
 }
 
+children = [];
 function telescope(div){
-
-    var regChildren = div.getElementsByClassName('R nottel');
-    var tel = div.getElementsByClassname('R tel');
+    console.log("telescope");
+    console.log(div);
+    children = div.childNodes;
+    var nottel = [...children].filter(
+            function(e){return e.classList.contains("nottel")});
+    var tel = [...children].filter(e =>  e.classList.contains("tel"));
+    console.log(children)
+    console.log(nottel)
     
     /* Do some telescoping */
     if (tel.length == 1){
@@ -28,8 +34,8 @@ function telescope(div){
     }
 
     /* Recurse */
-    for (var i = 0; i < regChildren.length; i++) {
-        var child = regChildren[i]
+    for (var i = 0; i < children.length; i++) {
+        var child = children[i]
         telescope(child);
     }
 

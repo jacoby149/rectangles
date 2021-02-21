@@ -3,8 +3,8 @@ body{
     margin:0;
     color:white;
     font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size:10pt;
 }
-
 
 .app{
     padding:0;
@@ -29,6 +29,13 @@ body{
     padding:0;
     margin:0;
     overflow: auto;
+}
+
+.R input{
+  background-color:#00000000;
+  border: 0pt;
+  color:white;
+
 }
 
 
