@@ -2,15 +2,29 @@
 
 
 
-### * CORS is required:
+### * (For web dev beginners) CORS is required:
 
-React requires CORS, so you cant just click index.html to see the demo.
+React requires CORS, so you cant just click *index.html* to see the demo.
 
-Rather, install PHP, and run this command in the repository folder :
+file:// blocks cross origin requests, so you have to properly https:// host the folder.
+
+To try the demo, install PHP or another https server.
+
+**PHP instructions**
+
+To install PHP on mac easily, run
+
+```
+brew install php
+```
+
+To run the server, run this command in the repository folder :
 
 ```
 php -S localhost:8000
 ```
+
+Now visit localhost:8000 in your browser.
 
 
 
