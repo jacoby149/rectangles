@@ -1,0 +1,46 @@
+body{
+    padding:0;
+    margin:0;
+    color:white;
+}
+
+
+.app{
+    padding:0;
+    margin:0;
+    width:100vw;
+    height:100vh;
+}
+
+.root{
+    width:100vw;
+    height:100vh;
+
+}
+
+.R{
+    background-color:#23282c;
+    border-color:#4b5a65;
+    border-width:1px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding:0;
+    margin:0;
+    overflow: auto;
+}
+
+
+.R::-webkit-scrollbar {
+  width: 9px;               /* width of the entire scrollbar */
+}
+
+.R::-webkit-scrollbar-track {
+  background: #222222;        /* color of the tracking area */
+}
+
+.R::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 1px solid #222222;  /* creates padding around scroll thumb */
+}
