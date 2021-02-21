@@ -2,6 +2,18 @@
 
 
 
+### * CORS is required:
+
+React requires CORS, so you cant just click index.html to see the demo.
+
+Rather, install PHP, and run this command in the repository folder :
+
+```
+php -S localhost:8000
+```
+
+
+
 ### Rectangles.js is a no NPM React component. 
 
 (See this link to learn more about no NPM React.)
@@ -99,4 +111,3 @@ return {
 | **Input**      | Minimalist text entry field.                                 |
 | **Table/Card** | Collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format on mobile with search and sort functionality also. |
 | **Rectangles** | Rectangles are just div elements, so place whatever content you would like in them :) |
-
