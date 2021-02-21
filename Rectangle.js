@@ -56,7 +56,7 @@ function R(props){
     if (br){ style=a(style,{ borderRightStyle: "solid" } ) };
 
     /* noscroll */
-    /*if (props.ns){style=a(style,{overflow:"hidden"})}*/
+    if (props.ns){style=a(style,{overflow:"hidden"})}
 
     /* Rect Size */
     const v = (!props.ps || props.ps == "top" || props.ps == "bottom")
@@ -78,8 +78,6 @@ function R(props){
         });
       }
     );
-
-    console.log(style);
 
     return (
         <div childfloat={side} tel={props.tel?"true":"false"} 

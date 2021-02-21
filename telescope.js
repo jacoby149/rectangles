@@ -1,31 +1,29 @@
-function adjustWidth(tel){
-    if (tel.length > 1){
-        console.log("Warning. " + tel.length + " telescopic elements inside of ...");
-        console.log(div);
-        console.log("there should be 1 or less.")
+function dimDiff(div,nottel){
+    var [w,h]=[0,0];
+    for (var i = 0; i < nottel.length; i++) {
+        var child = nottel[i];
+        [w,h]=[w+child.clientWidth,h+child.clientHeight];
     }
-    if (tel.length > 1){console.log("To many telescopic rects.");}
-    else if (tel.length >0)
-        tel[0].width = dwidth;
+    return [(div.clientWidth-w) + "px",(div.clientHeight-h) + "px"];
 }
 
-children = [];
 function telescope(div){
-    console.log("telescope");
-    console.log(div);
-    children = div.childNodes;
-    var nottel = [...children].filter(
-            function(e){return e.classList.contains("nottel")});
-    var tel = [...children].filter(e =>  e.classList.contains("tel"));
-    console.log(children)
-    console.log(nottel)
-    
+    const children = [...div.childNodes].filter(e=> e.classList.contains("R"));
+    const nottel = [...children].filter(e => e.classList.contains("nottel"));
+    const tel = [...children].filter(e =>  e.classList.contains("tel"));
+    console.log(nottel,tel)
     /* Do some telescoping */
     if (tel.length == 1){
-        var [dwidth,dheight] = dimDiff(div,regChildren)
-        var side = div.side;
-        if (side=="left" || side=="right") tel[0].width = dwidth;
-        else if (side=="top" || side=="bottom") tel[0].height = dheight;
+        const t = tel[0];
+        const [dwidth,dheight] = dimDiff(div,nottel)
+        console.log(dwidth,dheight)
+        const side = div.getAttribute('childfloat');
+        console.log(side);
+        const h = side=="left" || side=="right";
+        const v = side=="top" || side=="bottom";
+        if (h) { t.style.width = dwidth;}
+        else if (v){ t.style.height = dheight;}
+        console.log(t.style.width,t.style.height);
     }
 
     /* Alert Multi Telescope Issue */
@@ -35,7 +33,7 @@ function telescope(div){
 
     /* Recurse */
     for (var i = 0; i < children.length; i++) {
-        var child = children[i]
+        const child = children[i]
         telescope(child);
     }
 
