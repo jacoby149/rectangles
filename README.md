@@ -12,7 +12,7 @@ To try the demo, install PHP or another https server.
 
 **PHP instructions**
 
-To install PHP on mac easily, run
+To install PHP on mac easily, run the below line in your terminal. For windows, look up how to install PHP.
 
 ```
 brew install php
