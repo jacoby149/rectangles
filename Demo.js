@@ -43,12 +43,10 @@ function App(){
 
                 <R tel t ns><Text>Write a note here...</Text></R>
             </R>
-
         </R>
     )
 }
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-);
+ReactDOM.render(<App />,app);
+/* Start Telescope.js */
+startTelescope();

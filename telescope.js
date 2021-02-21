@@ -1,3 +1,4 @@
+
 function dimDiff(div,nottel){
     var [w,h]=[0,0];
     for (var i = 0; i < nottel.length; i++) {
@@ -39,6 +40,7 @@ function telescope(div){
 
 }
 
-/* Start Telescope.js */
-window.onresize = function(event) {telescope(app);};
-telescope(app);
+function startTelescope(){
+    window.onresize = function(e) {telescope(app);};
+    telescope(app);
+}
