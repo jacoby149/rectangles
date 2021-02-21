@@ -37,7 +37,7 @@ function App(){
                         <Text s={"50px"}>Note 10 :)  </Text>
                     </R>
                     <R t>
-                        <Text s={"50px"}> Plain Pad Copy in Rectangles.js</Text>
+                        <Text s={"200px"}> Plain Pad Copy in Rectangles.js</Text>
                     </R>
                 </R>
 
