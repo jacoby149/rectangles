@@ -12,13 +12,13 @@ function App(){
                     <R tel />
                     
                     <R l ns s = {"180px"}>
-                        <Text><i className="fa fa-user-circle fa-2x font-weight-bold"></i></Text>
-                        <Text><i className="fa fa-moon fa-2x font-weight-bold"></i></Text>
-                        <Text><i className="fa fa-file fa-2x font-weight-bold"></i></Text>
+                        <Text s={"60px"}><i className="fa fa-user-circle fa-2x font-weight-bold"></i></Text>
+                        <Text s={"60px"}><i className="fa fa-moon fa-2x font-weight-bold"></i></Text>
+                        <Text s={"60px"}><i className="fa fa-file fa-2x font-weight-bold"></i></Text>
                     </R>
             </R>  
             
-            <R tel l ns>
+            <R tel l>
 
                 <R t ns br s= {"270px"}>
                     <R s = {"50px"}>
@@ -41,7 +41,7 @@ function App(){
                     </R>
                 </R>
 
-                <R tel t ns><Text>Write a note here...</Text></R>
+                <R tel t ><Text>Write a note here...</Text></R>
             </R>
         </R>
     )

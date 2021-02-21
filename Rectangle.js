@@ -55,8 +55,8 @@ function R(props){
     if (bl){ style=a(style,{ borderLeftStyle: "solid" } ) };
     if (br){ style=a(style,{ borderRightStyle: "solid" } ) };
 
-    /* noscroll */
-    if (props.ns){style=a(style,{overflow:"hidden"})}
+    /* noscroll Shouldn't be needed....*/
+    /* if (props.ns){style=a(style,{overflow:"hidden"})} */
 
     /* Rect Size */
     const v = (!props.ps || props.ps == "top" || props.ps == "bottom")
@@ -64,8 +64,8 @@ function R(props){
 
     if (props.className != "root"){
         if (!s){s="auto"}
-        if (v){style= a(style,{height:s,width:"auto"} )} /* for now */
-        else {style=a(style,{width:s,height:"auto"})}
+        if (v){style= a(style,{height:s,width:"100%"} )} /* for now */
+        else {style=a(style,{width:s,height:"100%"})}
     }
 
     /* Pass float orientation to children */

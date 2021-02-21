@@ -9,6 +9,7 @@ function dimDiff(div,nottel){
 }
 
 function telescope(div){
+    console.log("Current : ",div);
     const children = [...div.childNodes].filter(e=> e.classList.contains("R"));
     const nottel = [...children].filter(e => e.classList.contains("nottel"));
     const tel = [...children].filter(e =>  e.classList.contains("tel"));
