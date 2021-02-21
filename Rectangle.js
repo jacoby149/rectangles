@@ -56,7 +56,7 @@ function R(props){
     if (br){ style=a(style,{ borderRightStyle: "solid" } ) };
 
     /* noscroll Shouldn't be needed....*/
-    /* if (props.ns){style=a(style,{overflow:"hidden"})} */
+    if (props.ns){style=a(style,{overflow:"hidden"})}
 
     /* Rect Size */
     const v = (!props.ps || props.ps == "top" || props.ps == "bottom")
