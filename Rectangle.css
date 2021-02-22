@@ -38,6 +38,10 @@ body{
 
 }
 
+.R a{
+  color:orange;
+}
+
 
 .R::-webkit-scrollbar {
   width: 9px;               /* width of the entire scrollbar */
