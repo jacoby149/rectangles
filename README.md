@@ -14,30 +14,32 @@
 
 Rectangles is a strict design system that enforces *glitch-free*, *responsive* apps.
 
-Rectangles layouts are *formulaic*. For two people to have identical layouts, they would need identical code.
+Rectangles layouts are *formulaic*. Identical layouts implies Identical code.
 
-Rectangles is built on *no JSX* React, making it easy for anyone to spin up immediately without NPM. 
+Rectangles is built on *no JSX* React, npm is not a requirement.
 
 (See this link to learn more about *no JSX* React.)
 https://reactjs.org/docs/add-react-to-a-website.html
 
 
 
-#### Hosting Advice :
+#### Web Hosting Advice (Deployment ):
 
-React requires CORS, so you can't just click *index.html* and view it locally to see the demo.
+React requires CORS. You can't just click *index.html* and view it locally to see the demo.
 
 You need to host the site via http:// or https://. 
 
-GitHub Pages has trouble hosting Rectangles projects ( or any *no JSX* project) . Instead, use <a href = "https://www.netlify.com/">Netlify</a>.
+GitHub Pages has trouble hosting Rectangles projects ( Or any *no JSX* project) . Use <a href = "https://www.netlify.com/">Netlify</a>.
 
 
 
-#### Local Development Advice
+#### Local Hosting Advice For Starting Web Developers (Development) :
 
-To run a rectangles project locally, I recommend installing <a href="https://www.php.net/manual/en/install.php">PHP</a>. 
+If you are new to web development, I recommend installing <a href="https://www.php.net/manual/en/install.php">PHP</a>. 
 
-Open a terminal, navigate to the project folder, and run this command to host locally via http:// :
+I don't write apps in PHP. I use PHP's server utility to locally host my static web projects.
+
+Open a terminal, navigate to your project folder, and run this command to host locally via http:// :
 
 ```
 php -S localhost:8000
