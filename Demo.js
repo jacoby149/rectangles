@@ -4,23 +4,23 @@ function App(){
         <R t ns bt bb br bl className="root">
             
             <R l ns bb s={"70px"} >
-                    <R l ns s={"300px"}>
+                    <R l ns s={"200px"}>
                         <Logo/>
-                        <Text s = {"200px"}><h3>Plainpad<br/> Standalone</h3></Text>
+                        <Text s = {"120px"}><h3>Plainpad<br/> Standalone</h3></Text>
                     </R>
 
                     <R tel />
                     
-                    <R l ns s = {"180px"}>
-                        <Text s={"60px"}><i className="fa fa-user-circle fa-2x font-weight-bold"></i></Text>
-                        <Text s={"60px"}><i className="fa fa-moon fa-2x font-weight-bold"></i></Text>
-                        <Text s={"60px"}><i className="fa fa-file fa-2x font-weight-bold"></i></Text>
+                    <R l ns s = {"150px"}>
+                        <Text s={"50px"}><i className="fa fa-user-circle fa-2x font-weight-bold"></i></Text>
+                        <Text s={"50px"}><i className="fa fa-moon fa-2x font-weight-bold"></i></Text>
+                        <Text s={"50px"}><i className="fa fa-file fa-2x font-weight-bold"></i></Text>
                     </R>
             </R>  
             
             <R tel l>
 
-                <R t ns br s= {"270px"}>
+                <R t ns br s= {"240px"}>
                     <R s = {"50px"}>
                     <Text><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"10em",marginLeft:"10%"}}/></Text>    
                     </R>        
