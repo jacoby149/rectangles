@@ -1,6 +1,8 @@
 # Rectangles Framework 
 
+**Demo : ** <a href="https://plainpaddemo.netlify.app/">Plainpad UI Copy</a>
 
+(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project.)
 
 ### * (For web dev beginners) CORS is required:
 
