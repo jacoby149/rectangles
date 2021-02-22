@@ -1,27 +1,3 @@
-
-
-function Logo(props){
-    return(
-        <R ps = {props.ps}>  
-            <img src = {"pp.svg"} style={{height:"60%",margin:"20%",paddingLeft:"15px"}} />
-        </R>
-
-    )
-}
-
-function Text(props){
-    return (
-        <R {...props}>
-            <R ns t>
-                <div style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
-                                }}>
-                {props.children}
-                </div>
-            </R>
-        </R>
-    )
-}
-
 /* The Rectangle component */
 function R(props){
     
