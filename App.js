@@ -24,20 +24,20 @@ function Text(props){
 function App(){
     return (
         <R t ns bt bb br bl className="root">
-            
+            <link rel="stylesheet" href="style.css" />
             <R l ns bb s={"70px"} >
-                    <R l ns s={"200px"}>
-                        <Logo/>
-                        <Text s = {"120px"}><h3>Plainpad<br/> Design Copy</h3></Text>
-                    </R>
+                <R l ns s={"200px"}>
+                    <Logo/>
+                    <Text s = {"120px"}><h3>Plainpad<br/> Design Copy</h3></Text>
+                </R>
 
-                    <R tel />
-                    
-                    <R l ns s = {"150px"}>
-                        <Text s={"50px"}><i className="fa fa-user-circle fa-2x font-weight-bold"></i></Text>
-                        <Text s={"50px"}><i className="fa fa-moon fa-2x font-weight-bold"></i></Text>
-                        <Text s={"50px"}><i className="fa fa-file fa-2x font-weight-bold"></i></Text>
-                    </R>
+                <R tel />
+                
+                <R l ns s = {"150px"}>
+                    <Text s={"50px"}><i className="fa fa-user-circle fa-2x font-weight-bold"></i></Text>
+                    <Text s={"50px"}><i className="fa fa-moon fa-2x font-weight-bold"></i></Text>
+                    <Text s={"50px"}><i className="fa fa-file fa-2x font-weight-bold"></i></Text>
+                </R>
             </R>  
             
             <R tel l>
