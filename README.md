@@ -14,9 +14,9 @@
 
 Rectangles is a strict design system that enforces *glitch-free*, *responsive* apps.
 
-Rectangles layouts are *formulaic*. Identical layouts implies Identical code.
+Rectangles layouts are *formulaic*, meaning identical layouts imply Identical code.
 
-Rectangles is built on *no JSX* React, npm is not a requirement.
+Rectangles is built on *no JSX* React, so npm is not a requirement.
 
 (See this link to learn more about *no JSX* React.)
 https://reactjs.org/docs/add-react-to-a-website.html
@@ -45,7 +45,9 @@ Open a terminal, navigate to your project folder, and run this command to host l
 php -S localhost:8000
 ```
 
-Then, go to localhost:8000 in your browser to view the project.
+Then, go to localhost:8000 in your browser to view the project. 
+
+Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 
 
