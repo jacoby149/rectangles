@@ -22,7 +22,7 @@ function App(){
 
                 <R t ns br s= {"240px"}>
                     <R s = {"50px"}>
-                    <Text><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"10em",marginLeft:"10%"}}/></Text>    
+                    <Text><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"5em",marginLeft:"10%"}}/></Text>    
                     </R>        
                     <R tel bb bt t> 
                         <Text s={"50px"}>Note 1 :) </Text>
