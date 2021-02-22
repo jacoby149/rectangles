@@ -2,11 +2,13 @@
 
 
 
-#### Demo : 
 
-<a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app </a>
+
+#### Demo : <a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app </a>
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project.)
+
+
 
 
 
@@ -23,6 +25,8 @@ https://reactjs.org/docs/add-react-to-a-website.html
 
 
 
+
+
 #### Hosting Advice :
 
 React requires CORS, so you can't just click *index.html* and view it locally to see the demo.
@@ -30,6 +34,8 @@ React requires CORS, so you can't just click *index.html* and view it locally to
 You need to host the site via http:// or https://. 
 
 GitHub Pages has trouble hosting Rectangles projects ( or any *no JSX* project) . Instead, use <a href = "https://www.netlify.com/">Netlify</a>.
+
+
 
 
 
@@ -47,6 +53,8 @@ Then, go to localhost:8000 in your browser to view the project.
 
 
 
+
+
 #### Overview (The Rectangles Standard In 12 Steps) : 
 
 1. The index.html body has an <App/> component rendered into it. 
@@ -61,6 +69,8 @@ Then, go to localhost:8000 in your browser to view the project.
 10.  Amongst sibling rectangles, one of them is allowed to be telescopic.
 11. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
 12. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
+
+
 
 
 
@@ -84,6 +94,8 @@ Then, go to localhost:8000 in your browser to view the project.
 
 
 
+
+
 #### Helpful Additional Built-In Components
 
 | Component         | Uses                                                         |
@@ -91,6 +103,8 @@ Then, go to localhost:8000 in your browser to view the project.
 | **Content(C)**    | Rectangle sub class with easy to position internal content.  |
 | **Input(I)**      | Content sub class that is a Minimalist text entry field.     |
 | **Table/Card(T)** | Content sub class that is a collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format with search and sort functionality. |
+
+
 
 
 
