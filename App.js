@@ -6,7 +6,7 @@ function App(){
             <R l ns bb s={"70px"} >
                     <R l ns s={"200px"}>
                         <Logo/>
-                        <Text s = {"120px"}><h3>Plainpad<br/> Standalone</h3></Text>
+                        <Text s = {"120px"}><h3>Plainpad<br/> Layout Copy</h3></Text>
                     </R>
 
                     <R tel />

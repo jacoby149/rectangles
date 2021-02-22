@@ -1,6 +1,6 @@
 # Rectangles.js Framework 
 
-
+![alt text](C:\Users\Jacob\Documents\GitHub\rectangles.js\logo.jpg)
 
 #### Demo : 
 

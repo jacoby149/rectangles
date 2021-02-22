@@ -3,7 +3,7 @@
 function Logo(props){
     return(
         <R ps = {props.ps}>  
-            <img src = {"pp.svg"} style={{height:"60%",margin:"20%",paddingLeft:"15px"}} />
+            <img src = {"logo.jpg"} style={{height:"60%",margin:"20%",paddingLeft:"15px",imageRendering:"pixelated"}} />
         </R>
 
     )
