@@ -4,7 +4,7 @@
 
 #### Demo : 
 
-<a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app </a>
+<a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app</a>
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project.)
 
