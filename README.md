@@ -23,7 +23,7 @@ https://reactjs.org/docs/add-react-to-a-website.html
 
 
 
-#### Web Hosting Advice (Deployment ):
+#### Web Hosting Advice (Deployment):
 
 React requires CORS. You can't just click *index.html* and view it locally to see the demo.
 
