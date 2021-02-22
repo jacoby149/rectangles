@@ -1,16 +1,7 @@
-
 /* App made of entirely rectangle components */
 function App(){
     return (
         <R t ns bt bb br bl className="root">
-
-            {/* 
-            BEST PRACTICE : 
-            Include any custom styles and scripts within the app component.
-            <link src = "style.css"></link>
-            <script type="text/babel" src="customComponent.js"></script>
-            */}
-
             <R l ns bb s={"70px"} >
                 <R l ns s={"200px"}>
                     <C tel>
