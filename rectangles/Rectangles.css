@@ -18,6 +18,11 @@ body{
 
 }
 
+.h:hover{
+  background-color:#4b5a65;
+}
+
+
 .R{
     font-size:10pt;
     background-color:#23282c;
@@ -41,7 +46,6 @@ body{
 .R a{
   color:orange;
 }
-
 
 .R::-webkit-scrollbar {
   width: 9px;               /* width of the entire scrollbar */

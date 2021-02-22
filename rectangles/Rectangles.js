@@ -34,6 +34,8 @@ function R(props){
     /* noscroll Shouldn't be needed....*/
     if (props.ns){style=a(style,{overflow:"hidden"})}
 
+    if (props.h){style=a(style,{})}
+
     /* Rect Size */
     const v = (!props.ps || props.ps == "top" || props.ps == "bottom")
     var [s,ms] = [props.s,props.ms];
@@ -54,10 +56,13 @@ function R(props){
         });
       }
     );
-
+    
+    const isTel = props.tel?"tel ":"nottel ";
+    const isHover = props.h?"h ":"";
+    const className = "R " + isTel + isHover + props.className
     return (
         <div childfloat={side} tel={props.tel?"true":"false"} 
-            className = {"R " + (props.tel?"tel ":"nottel ") + props.className}
+            className = {className}
                 style = {{...style,...props.style}}>
         
             {updatedChildren}

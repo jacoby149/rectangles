@@ -10,7 +10,7 @@ function Logo(props){
 function Text(props){
     return (
         <R {...props}>
-            <R ns t>
+            <R ns t h={props.h}>
                 <div style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
                                 }}>
                 {props.children}
@@ -24,7 +24,14 @@ function Text(props){
 function App(){
     return (
         <R t ns bt bb br bl className="root">
-            <link rel="stylesheet" href="style.css" />
+
+            {/* 
+            BEST PRACTICE : 
+            Include any custom styles and scripts within the app component.
+            <link src = "style.css"></link>
+            <script type="text/babel" src="customComponent.js"></script>
+            */}
+
             <R l ns bb s={"70px"} >
                 <R l ns s={"200px"}>
                     <Logo/>
@@ -44,19 +51,19 @@ function App(){
 
                 <R t ns br s= {"240px"}>
                     <R s = {"50px"}>
-                    <Text><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"5em",marginLeft:"10%"}}/></Text>    
+                    <Text h><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"5em",marginLeft:"10%"}}/></Text>    
                     </R>        
                     <R tel bb bt t> 
-                        <Text s={"50px"}>Note 1 :) </Text>
-                        <Text s={"50px"}>Note 2 :)</Text>
-                        <Text s={"50px"}>Note 3 :)</Text>
-                        <Text s={"50px"}>Note 4 :)</Text>
-                        <Text s={"50px"}>Note 5 :)</Text>
-                        <Text s={"50px"}>Note 6 :)</Text>
-                        <Text s={"50px"}>Note 7 :)</Text>
-                        <Text s={"50px"}>Note 8 :)</Text>
-                        <Text s={"50px"}>Note 9 :)</Text>
-                        <Text s={"50px"}>Note 10 :)  </Text>
+                        <Text h s={"50px"}>Note 1 :) </Text>
+                        <Text h s={"50px"}>Note 2 :)</Text>
+                        <Text h s={"50px"}>Note 3 :)</Text>
+                        <Text h s={"50px"}>Note 4 :)</Text>
+                        <Text h s={"50px"}>Note 5 :)</Text>
+                        <Text h s={"50px"}>Note 6 :)</Text>
+                        <Text h s={"50px"}>Note 7 :)</Text>
+                        <Text h s={"50px"}>Note 8 :)</Text>
+                        <Text h s={"50px"}>Note 9 :)</Text>
+                        <Text h s={"50px"}>Note 10 :)  </Text>
                     </R>
                     <R t>
                         <Text s={"200px"}> <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;Copy in Rectangles.js</Text>
