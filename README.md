@@ -1,6 +1,6 @@
-# Rectangles.js Framework 
+# <img src="logo.jpg" style="image-rendering:pixelated;"></img> Rectangles.js Framework 
 
-![alt text](C:\Users\Jacob\Documents\GitHub\rectangles.js\logo.jpg)
+
 
 #### Demo : 
 
