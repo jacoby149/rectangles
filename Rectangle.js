@@ -11,7 +11,7 @@ function Logo(props){
 
 function Text(props){
     return (
-        <R ps ={props.ps} s = {props.s}>
+        <R {...props}>
             <R ns t>
                 <div style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
                                 }}>
