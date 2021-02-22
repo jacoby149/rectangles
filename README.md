@@ -51,20 +51,21 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 
 
-#### Overview (The Rectangles Standard In 12 Steps) : 
+#### Overview (The Rectangles Standard In 13 Steps) : 
 
-1. The index.html body has an App component rendered into it. 
-2. App is comprised of rectangles.
-3. The main rectangle (root rectangle) is a viewport sized Rectangle with className = "root".
-4. The root rectangle is the only rectangle that has no free dimensions.
-5. All non root rectangles have 1 free dimension that can be resized with the s={size} attribute.
-6. All rectangles have a child float attribute that controls where children rectangles float. (t, l, b,or r)
-7. If a rectangle has a parent with the t or b attribute, its width is the free dimension.
-8. If a rectangle has a parent with the l or r attribute, its height is the free dimension.
-9. Rectangles are defaulted with the t attribute if they don't have t, l, b or r.
-10.  Amongst sibling rectangles, one of them is allowed to be telescopic.
-11. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
-12. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
+1. Rectangles projects are written entirely in an App.js file within a React component called App.
+2. The index.html body has an App component rendered into it.
+3. App is comprised of rectangles.
+4. The main rectangle (root rectangle) is a viewport sized Rectangle with className = "root".
+5. The root rectangle is the only rectangle that has no free dimensions.
+6. All non root rectangles have 1 free dimension that can be resized with the s={size} attribute.
+7. All rectangles have a child float attribute that controls where children rectangles float. (t, l, b,or r)
+8. If a rectangle has a parent with the t or b attribute, its width is the free dimension.
+9. If a rectangle has a parent with the l or r attribute, its height is the free dimension.
+10. Rectangles are defaulted with the t attribute if they don't have t, l, b or r.
+11.  Amongst sibling rectangles, one of them is allowed to be telescopic.
+12. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
+13. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
 
 
 
@@ -100,4 +101,4 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 #### Example :
 
-See the file : *DemoApp.js*
+See the included repository file : *App.js*
