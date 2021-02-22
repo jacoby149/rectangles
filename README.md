@@ -12,7 +12,7 @@
 
 #### Summary :
 
-Rectangles is a strict design system that enforces *glitch-free*, *responsive* apps.
+Rectangles is a front end design system that enforces *glitch-free*, *responsive* apps.
 
 Rectangles layouts are *formulaic*, meaning identical layouts imply Identical code.
 
