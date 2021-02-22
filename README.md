@@ -49,8 +49,8 @@ Then, go to localhost:8000 in your browser to view the project.
 
 #### Overview (The Rectangles Standard In 12 Steps) : 
 
-1. The index.html body has an <App/> component rendered into it. 
-2. <App/> is comprised of rectangles.
+1. The index.html body has an App component rendered into it. 
+2. App is comprised of rectangles.
 3. The main rectangle (root rectangle) is a viewport sized Rectangle with className = "root".
 4. The root rectangle is the only rectangle that has no free dimensions.
 5. All non root rectangles have 1 free dimension that can be resized with the s={size} attribute.
