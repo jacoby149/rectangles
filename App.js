@@ -1,3 +1,25 @@
+function Logo(props){
+    return(
+        <R ps = {props.ps}>  
+            <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%",paddingLeft:"15px"}} />
+        </R>
+
+    )
+}
+
+function Text(props){
+    return (
+        <R {...props}>
+            <R ns t>
+                <div style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
+                                }}>
+                {props.children}
+                </div>
+            </R>
+        </R>
+    )
+}
+
 /* App made of entirely rectangle components */
 function App(){
     return (
