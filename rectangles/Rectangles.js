@@ -1,7 +1,7 @@
 function C(props){
     return (
         <R {...props}>
-            <R tel ns t h={props.h}>
+            <R tel t h={props.h}>
                 <div style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
                                 }}>
                 {props.children}
