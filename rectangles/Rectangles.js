@@ -23,7 +23,7 @@ function C(props){
     return (
         <R {...pass(props)}>
             <R tel t h={props.h}>
-                <div {...pass(props)} style = {{display:"flex",flexBasis:"100%",flexWrap:"wrap",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
+                <div {...pass(props)} style = {{display:"flex",flexWrap:"wrap",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"10px"
                                 }}>
                 {props.children}
                 </div>

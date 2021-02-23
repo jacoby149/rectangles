@@ -1,6 +1,15 @@
+
+/* chrome */
 html::-webkit-scrollbar {
   display: none;
+
 }
+
+/* firefox */
+html{
+  scrollbar-width: none;
+}
+
 
 body{
     padding:0;
