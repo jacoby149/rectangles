@@ -1,6 +1,18 @@
+
+function pass(props){
+  const objectMap = (obj, fn) =>
+  Object.fromEntries(
+    Object.entries(obj).map(
+      ([k, v], i) => [k, fn(v, k, i)]
+    )
+  )
+  
+  return objectMap(props,v=>v===true?"true":(v===false?"false":v))
+}
+
 function T(props){
   return(
-  <C {...props}>
+  <C {...pass(props)}>
     <textarea className = {"R " + props.theme} style={{paddingTop:"18px",height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
   </C>
   )
@@ -8,9 +20,9 @@ function T(props){
 
 function C(props){
     return (
-        <R {...props}>
+        <R {...pass(props)}>
             <R tel t h={props.h}>
-                <div {...props} style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
+                <div {...pass(props)} style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
                                 }}>
                 {props.children}
                 </div>

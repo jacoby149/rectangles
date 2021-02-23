@@ -70,7 +70,7 @@ function App(){
 /* The credit/link to the original Plain Pad project */
 function Credits(props){
     return(
-        <R t {...props}>
+        <R t {...pass(props)}>
             <C s={"70px"}> 
                 <div style={{fontFamily:"monospace"}}>
                     <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
@@ -85,7 +85,7 @@ function Credits(props){
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
 function Note(props){
     return (
-        <C h s={"50px"} {...props}>
+        <C h s={"50px"} {...pass(props)}>
             {props.children}
         </C>
     )
@@ -96,7 +96,7 @@ function Note(props){
 function Icon(props){
     const iconClass = "fa-"+props.children;
     return(
-        <C s={"50px"} {...props}>
+        <C s={"50px"} {...pass(props)}>
             <i className={"fa "+ iconClass +" fa-2x font-weight-bold"}></i>
         </C>
     )
@@ -106,7 +106,7 @@ function Icon(props){
 /* Top Pane Site Branding Component */
 function Branding(props){
     return(
-        <R l {...props}>
+        <R l {...pass(props)}>
 
             <C l ns s = {"70px"}>{/* Plain Pad Logo */}
                 <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%",float:"right"}} />
