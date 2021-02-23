@@ -60,12 +60,12 @@ function App(){
 
                 <R t ns br c={collapse} s= {"240px"}>
 
-                    <R l msc s = {"50px"}>
+                    <R l s = {"50px"}>
                         <C h s={"100px"}><h4>Search Bar : </h4></C>
                         <T tel>Search...</T>    
                     </R>        
 
-                    <R tel bb bt t msc>
+                    <R tel bb bt t>
                         <Note>Note 0 :)</Note> 
                         <Note>Note 1 :)</Note> 
                         <Note>Note 2 :)</Note> 
@@ -77,7 +77,7 @@ function App(){
                         <Note>Note 8 :)</Note> 
                     </R>
 
-                    <R t>
+                    <R t msc>
                         <C s={"130px"}> 
                         <div style={{fontFamily:"monospace"}}>
                             <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
