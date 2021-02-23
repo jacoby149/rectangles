@@ -1,7 +1,7 @@
 function T(props){
   return(
-  <C ps={props.ps}>
-    <textarea className = "R" style={{paddingTop:"10px",height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
+  <C {...props}>
+    <textarea className = {"R " + props.theme} style={{paddingTop:"10px",height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
   </C>
   )
 }
@@ -10,7 +10,7 @@ function C(props){
     return (
         <R {...props}>
             <R tel t h={props.h}>
-                <div style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
+                <div {...props} style = {{display:"flex",height:"100%",alignItems:"center",justifyContent:"left",paddingLeft:"15px"
                                 }}>
                 {props.children}
                 </div>
@@ -73,7 +73,8 @@ function R(props){
       (child, i) => {
         return React.cloneElement(child, {
         //this properties are available as a props in child components
-          ps: side
+          ps: side,
+          theme: props.theme
         });
       }
     );
@@ -85,7 +86,8 @@ function R(props){
     const isTel = props.tel?"tel ":"nottel ";
     const isHover = props.h?"h ":"";
     const isdeskOnly = props.d?"d ":""
-    const className = "R " + isTel + isHover +isdeskOnly + props.className
+    const theme = props.theme + " ";
+    const className = "R " + theme + isTel + isHover +isdeskOnly + props.className
     return (
         <div childfloat={side} tel={props.tel?"true":"false"} 
             className = {className}

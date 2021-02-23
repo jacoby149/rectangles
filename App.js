@@ -11,14 +11,20 @@ function Note(props){
 
 /* App made of entirely rectangle components */
 function App(){
+
     const [collapse,setCollapse] = React.useState(false);
- 
     function toggleCollapse(){
         setCollapse(!collapse);
     }
 
+    const [theme,setTheme] = React.useState("dark")
+    function toggleTheme(){
+        if (theme=="dark"){setTheme("light")}
+        else {setTheme("dark")}
+    }
+
     return (
-        <R t ns bt bb br bl className="root">
+        <R t ns bt bb br bl className="root" theme={theme}>
             <R l ns bb s={"70px"} >
                 
                 <C l ns s = {"70px"}>
@@ -30,17 +36,23 @@ function App(){
                 </C>
                 
                 
-                <C h l ns s={"50px"}>
-                    <i onClick={toggleCollapse} className="fa fa-bars fa-2x font-weight-bold"></i>
+                <C l h ns s={"50px"} onClick={toggleCollapse}>
+                    <i className="fa fa-bars fa-2x font-weight-bold"></i>
                 </C>
                 
 
                 <R tel />
                 
                 <R l ns s = {"150px"}>
-                    <C s={"50px"}><i className="fa fa-user-circle fa-2x font-weight-bold"></i></C>
-                    <C s={"50px"}><i className="fa fa-moon fa-2x font-weight-bold"></i></C>
-                    <C s={"50px"}><i className="fa fa-file fa-2x font-weight-bold"></i></C>
+                    <C s={"50px"}>
+                        <i className="fa fa-user-circle fa-2x font-weight-bold"></i>
+                    </C>
+                    <C s={"50px"} onClick={toggleTheme}>
+                        <i className="fa fa-moon fa-2x font-weight-bold"></i>
+                    </C>
+                    <C s={"50px"}>
+                        <i className="fa fa-file fa-2x font-weight-bold"></i>
+                    </C>
                 </R>
             </R>  
             
