@@ -61,7 +61,7 @@ function R(props){
     const v = (!props.ps || props.ps == "top" || props.ps == "bottom")
     var [s,ms] = [props.s,props.ms];
 
-    if (props.className != "root"){
+    if (!props.root){
         if (!s){s="auto"}
         if (v){style= a(style,{height:s,width:"100%"} )} /* for now */
         else {style=a(style,{width:s,height:"100%"})}
@@ -87,8 +87,10 @@ function R(props){
     const isHover = props.h?"h ":"";
     const ismc = props.mc?"mc ":""
     const ismsc = props.msc?"msc ":""
+    const root = props.root?"root ":""
     const theme = props.theme + " ";
-    const className = "R " + theme + isTel + isHover +ismc +ismsc+ props.className
+
+    const className = "R " + root + theme + isTel + isHover +ismc +ismsc+ props.className
     return (
         <div childfloat={side} 
             className = {className}

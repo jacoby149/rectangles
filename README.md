@@ -73,6 +73,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 | Attributes             | Effect                                                       |
 | :--------------------- | ------------------------------------------------------------ |
+| **root**               | The root attribute is given to the Rectangle that everything is nested inside of within in the App component. The root rectangle always fills the whole viewport. |
 | **t**                  | Children float top in their parent.                          |
 | **l**                  | Children float left in their parent.                         |
 | **r**                  | Children float right in their parent.                        |

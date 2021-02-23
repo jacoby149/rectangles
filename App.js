@@ -24,7 +24,7 @@ function App(){
     }
 
     return (
-        <R t bt bb br bl className="root" theme={theme}>
+        <R root t bt bb br bl theme={theme}>
             <R l ns bb s={"70px"} >
                 
                 <C l ns s = {"70px"}>
