@@ -18,10 +18,15 @@ body{
 
 }
 
+@media only screen and (max-width: 600px) {
+ .d 
+ {display:none;}
+}
+
+
 .h:hover{
   background-color:#4b5a65;
 }
-
 
 .R{
     font-size:10pt;

@@ -69,10 +69,15 @@ function R(props){
         });
       }
     );
+
+    /* if Collapsed */
+    if (props.c){style= a(style,{display:"none"} )} /* for now */
+
     
     const isTel = props.tel?"tel ":"nottel ";
     const isHover = props.h?"h ":"";
-    const className = "R " + isTel + isHover + props.className
+    const isdeskOnly = props.d?"d ":""
+    const className = "R " + isTel + isHover +isdeskOnly + props.className
     return (
         <div childfloat={side} tel={props.tel?"true":"false"} 
             className = {className}
