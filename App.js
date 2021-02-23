@@ -61,7 +61,7 @@ function App(){
                 <R t ns br c={collapse} s= {"240px"}>
                     <R l s = {"50px"}>
                     <C h s={"100px"}><h4>Search Bar : </h4></C>
-                    <T tel>Search..</T>    
+                    <T tel>Search...</T>    
                     </R>        
                     <R tel bb bt t>
                         <Note>Note 0 :)</Note> 
