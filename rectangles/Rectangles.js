@@ -18,6 +18,7 @@ function T(props){
   )
 }
 
+
 function C(props){
     return (
         <R {...pass(props)}>
@@ -30,6 +31,9 @@ function C(props){
         </R>
     )
 }
+
+
+
 
 /* The Rectangle component */
 function R(props){

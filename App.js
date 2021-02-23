@@ -60,7 +60,7 @@ function App(){
                 {/* Writing Pane */}
                 <R tel t ><T tel>Write a note here...</T></R>
 
-
+                
             </R>
         </R>
     )
