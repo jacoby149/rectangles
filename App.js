@@ -1,3 +1,80 @@
+/* Plain Pad app made of entirely rectangles.js components */
+function App(){
+
+    /* Menu Collapsed State */
+    const [collapse,setCollapse] = React.useState(false);
+    function toggleCollapse(){
+        setCollapse(!collapse);
+    }
+
+    /* Theme Color State */
+    const [theme,setTheme] = React.useState("dark")
+    function toggleTheme(){
+        if (theme=="dark"){setTheme("light")}
+        else {setTheme("dark")}
+    }
+
+    return (
+        
+        <R root t bt bb br bl theme={theme}>
+        {/* This is the root rectangle ^^^ */}
+            
+
+            {/* Top Pane */}
+            <R l ns bb s={"70px"} >
+                <Branding />                                
+                <Icon l h ns onClick={toggleCollapse}>bars</Icon>
+                <R tel />
+                <R l ns s = {"150px"}>
+                    <Icon>user-circle</Icon>
+                    <Icon onClick={toggleTheme}>moon</Icon>
+                    <Icon>file</Icon>
+                </R>
+            </R>  
+            
+
+            {/* Bottom Section */}
+            <R tel l>
+
+
+                {/* Side Pane */}
+                <R t ns br c={collapse} s= {"240px"}>
+                    <R l s = {"50px"}>
+                        <C h s={"100px"}><h4>Search Bar : </h4></C>
+                        <T tel>Search...</T>    
+                    </R>        
+                    <R tel bb bt t>
+                        <Note>Note 1 :)</Note> 
+                        <Note>Note 2 :)</Note> 
+                        <Note>Note 3 :)</Note> 
+                    </R>
+                    <Credits />
+                </R>
+
+
+                {/* Writing Pane */}
+                <R tel t ><T tel>Write a note here...</T></R>
+
+
+            </R>
+        </R>
+    )
+}
+
+
+/* The credit/link to the original Plain Pad project */
+function Credits(props){
+    return(
+        <R t {...props}>
+            <C s={"70px"}> 
+                <div style={{fontFamily:"monospace"}}>
+                    <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
+                </div>
+            </C>
+        </R>
+    )
+}
+
 
 /* A custom sub class of Content(C). (Which makes it a subclass of (R))
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
@@ -9,85 +86,31 @@ function Note(props){
     )
 }
 
-/* App made of entirely rectangle components */
-function App(){
 
-    const [collapse,setCollapse] = React.useState(false);
-    function toggleCollapse(){
-        setCollapse(!collapse);
-    }
+/* Custom Rectangles.js Icon Component */
+function Icon(props){
+    const iconClass = "fa-"+props.children;
+    return(
+        <C s={"50px"} {...props}>
+            <i className={"fa "+ iconClass +" fa-2x font-weight-bold"}></i>
+        </C>
+    )
+}
 
-    const [theme,setTheme] = React.useState("dark")
-    function toggleTheme(){
-        if (theme=="dark"){setTheme("light")}
-        else {setTheme("dark")}
-    }
 
-    return (
-        <R root t bt bb br bl theme={theme}>
-            <R l ns bb s={"70px"} >
-                
-                <C l ns s = {"70px"}>
-                    <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%",float:"right"}} />
-                </C>
-                
-                <C l ns mc s = {"120px"}>
-                    <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
-                </C>
-                
-                
-                <C l h ns s={"50px"} onClick={toggleCollapse}>
-                    <i className="fa fa-bars fa-2x font-weight-bold"></i>
-                </C>
-                
+/* Top Pane Site Branding Component */
+function Branding(props){
+    return(
+        <R l {...props}>
 
-                <R tel />
-                
-                <R l ns s = {"150px"}>
-                    <C s={"50px"}>
-                        <i className="fa fa-user-circle fa-2x font-weight-bold"></i>
-                    </C>
-                    <C s={"50px"} onClick={toggleTheme}>
-                        <i className="fa fa-moon fa-2x font-weight-bold"></i>
-                    </C>
-                    <C s={"50px"}>
-                        <i className="fa fa-file fa-2x font-weight-bold"></i>
-                    </C>
-                </R>
-            </R>  
+            <C l ns s = {"70px"}>{/* Plain Pad Logo */}
+                <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%",float:"right"}} />
+            </C>
             
-            <R tel l>
+            <C l ns mc s = {"120px"}>
+                <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
+            </C>
 
-                <R t ns br c={collapse} s= {"240px"}>
-
-                    <R l s = {"50px"}>
-                        <C h s={"100px"}><h4>Search Bar : </h4></C>
-                        <T tel>Search...</T>    
-                    </R>        
-
-                    <R tel bb bt t>
-                        <Note>Note 0 :)</Note> 
-                        <Note>Note 1 :)</Note> 
-                        <Note>Note 2 :)</Note> 
-                        <Note>Note 3 :)</Note> 
-                        <Note>Note 4 :)</Note> 
-                        <Note>Note 5 :)</Note> 
-                        <Note>Note 6 :)</Note> 
-                        <Note>Note 7 :)</Note> 
-                        <Note>Note 8 :)</Note> 
-                    </R>
-
-                    <R t>
-                        <C s={"70px"}> 
-                        <div style={{fontFamily:"monospace"}}>
-                            <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
-                        </div>
-                        </C>
-                    </R>
-                </R>
-
-                <R tel t ><T tel>Write a note here...</T></R>
-            </R>
         </R>
     )
 }
