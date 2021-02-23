@@ -14,7 +14,13 @@ Rectangles is a front end design system that enforces *glitch-free*, *responsive
 
 Rectangles layouts are *formulaic*, meaning identical layouts imply Identical code.
 
+
+
+## Ingredients :
+
 Rectangles is built on *no JSX* React, so npm is not a requirement.
+
+Rectangles includes <a href = "https://bulma.io/">Bulma.css</a> so you can style the interior of rectangle components exquisitely
 
 (See this link to learn more about *no JSX* React.)
 https://reactjs.org/docs/add-react-to-a-website.html
