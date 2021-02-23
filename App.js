@@ -66,7 +66,7 @@ function App(){
                     </R>
                 </R>
 
-                <R tel t ><C tel>Write a note here...</C></R>
+                <R tel t ><T tel>Write a note here...</T></R>
             </R>
         </R>
     )

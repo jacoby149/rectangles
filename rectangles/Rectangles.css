@@ -41,11 +41,16 @@ body{
     overflow: auto;
 }
 
-.R input{
+.R textarea,.R input{
   background-color:#00000000;
   border: 0pt;
   color:white;
+}
 
+.R input,.R textarea:focus {
+    outline: none !important;
+    border:0px ;
+    box-shadow: 0px;
 }
 
 .R a{

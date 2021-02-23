@@ -1,3 +1,11 @@
+function T(props){
+  return(
+  <C ps={props.ps}>
+    <textarea style={{height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
+  </C>
+  )
+}
+
 function C(props){
     return (
         <R {...props}>
