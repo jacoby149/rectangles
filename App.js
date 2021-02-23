@@ -15,10 +15,9 @@ function App(){
     }
 
     return (
-        
         <R root t bt bb br bl theme={theme}>
         {/* This is the root rectangle ^^^ */}
-            
+
 
             {/* Top Pane */}
             <R l ns bb s={"70px"} >
@@ -40,7 +39,9 @@ function App(){
                 {/* Side Pane */}
                 <R t ns br c={collapse} s= {"240px"}>
                     <R l s = {"50px"}>
-                        <C h s={"100px"}><h4>Search Bar : </h4></C>
+                        <C h s={"100px"}>
+                            <h4>Search Bar : </h4>
+                        </C>
                         <T tel>Search...</T>    
                     </R>        
                     <R tel bb bt t>
