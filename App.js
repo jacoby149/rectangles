@@ -24,7 +24,7 @@ function App(){
 
 
             {/* Top Pane */}
-            <R l ns bb s={"70px"} >
+            <R l bb s={"70px"} >
                 <Branding />                                
                 <Icon l ns onClick={toggleCollapse}>bars</Icon>
                 <R tel />
