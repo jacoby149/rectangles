@@ -90,7 +90,7 @@ function R(props){
     const theme = props.theme + " ";
     const className = "R " + theme + isTel + isHover +ismc +ismsc+ props.className
     return (
-        <div childfloat={side} tel={props.tel?"true":"false"} 
+        <div childfloat={side} 
             className = {className}
                 style = {{...style,...props.style}}>
         

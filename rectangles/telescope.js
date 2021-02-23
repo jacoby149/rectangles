@@ -1,5 +1,5 @@
 
-function dimDiff(div,nottel,tel){
+function dimDiff(div,nottel){
     var [w,h]=[0,0];
     for (var i = 0; i < nottel.length; i++) {
         var child = nottel[i];
@@ -15,7 +15,7 @@ function telescope(div){
     /* Do some telescoping */
     if (tel.length == 1){
         const t = tel[0];
-        const [dwidth,dheight] = dimDiff(div,nottel,t)
+        const [dwidth,dheight] = dimDiff(div,nottel)
         const side = div.getAttribute('childfloat');
         const h = side=="left" || side=="right";
         const v = side=="top" || side=="bottom";
