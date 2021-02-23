@@ -1,7 +1,7 @@
 function T(props){
   return(
   <C ps={props.ps}>
-    <textarea style={{height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
+    <textarea className = "R" style={{paddingTop:"10px",height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
   </C>
   )
 }
