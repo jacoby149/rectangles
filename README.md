@@ -85,7 +85,8 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **c** = {bool}         | Collapse the rectangle if bool hook is *true*, otherwise show. |
 | **s** = {size}         | Size of the rectangles free dimension. (Any valid css size format) |
 | **ns**                 | Prevent scrolling for the given rectangle.                   |
-| **d**                  | Show on desktop only.                                        |
+| **mc**                 | Collapse on mobile                                           |
+| **spc**                | Don't show on a sideways phone.                              |
 | **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 | **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 

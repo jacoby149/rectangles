@@ -85,9 +85,10 @@ function R(props){
     
     const isTel = props.tel?"tel ":"nottel ";
     const isHover = props.h?"h ":"";
-    const isdeskOnly = props.d?"d ":""
+    const ismc = props.mc?"mc ":""
+    const ismsc = props.msc?"msc ":""
     const theme = props.theme + " ";
-    const className = "R " + theme + isTel + isHover +isdeskOnly + props.className
+    const className = "R " + theme + isTel + isHover +ismc +ismsc+ props.className
     return (
         <div childfloat={side} tel={props.tel?"true":"false"} 
             className = {className}

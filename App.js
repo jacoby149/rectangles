@@ -31,7 +31,7 @@ function App(){
                     <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%",float:"right"}} />
                 </C>
                 
-                <C l ns d s = {"120px"}>
+                <C l ns mc s = {"120px"}>
                     <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
                 </C>
                 
@@ -59,11 +59,13 @@ function App(){
             <R tel l>
 
                 <R t ns br c={collapse} s= {"240px"}>
-                    <R l s = {"50px"}>
-                    <C h s={"100px"}><h4>Search Bar : </h4></C>
-                    <T tel>Search...</T>    
+
+                    <R l msc s = {"50px"}>
+                        <C h s={"100px"}><h4>Search Bar : </h4></C>
+                        <T tel>Search...</T>    
                     </R>        
-                    <R tel bb bt t>
+
+                    <R tel bb bt t msc>
                         <Note>Note 0 :)</Note> 
                         <Note>Note 1 :)</Note> 
                         <Note>Note 2 :)</Note> 
@@ -74,6 +76,7 @@ function App(){
                         <Note>Note 7 :)</Note> 
                         <Note>Note 8 :)</Note> 
                     </R>
+
                     <R t>
                         <C s={"130px"}> 
                         <div style={{fontFamily:"monospace"}}>
