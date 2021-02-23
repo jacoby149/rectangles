@@ -71,26 +71,25 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 #### Attributes special to the Rectangle(R) Component. 
 
-| Attributes     | Effect                                                       |
-| :------------- | ------------------------------------------------------------ |
-| **t**          | Children float top in their parent.                          |
-| **l**          | Children float left in their parent.                         |
-| **r**          | Children float right in their parent.                        |
-| **b**          | Children float bottom in their parent.                       |
-| **bt**         | Border top.                                                  |
-| **bb**         | Border bottom.                                               |
-| **br**         | Border right.                                                |
-| **bl**         | Border left.                                                 |
-| **h**          | Rectangle changes color on hover.                            |
-| **c** = {bool} | Collapse the rectangle if bool hook is *true*, otherwise show. |
-| **s** = {size} | Size of the rectangles free dimension. (Any valid css size format) |
-| **ns**         | Prevent scrolling for the given rectangle.                   |
-| **d**          | Show on desktop only.                                        |
-| **tel**        | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
+| Attributes             | Effect                                                       |
+| :--------------------- | ------------------------------------------------------------ |
+| **t**                  | Children float top in their parent.                          |
+| **l**                  | Children float left in their parent.                         |
+| **r**                  | Children float right in their parent.                        |
+| **b**                  | Children float bottom in their parent.                       |
+| **bt**                 | Border top.                                                  |
+| **bb**                 | Border bottom.                                               |
+| **br**                 | Border right.                                                |
+| **bl**                 | Border left.                                                 |
+| **h**                  | Rectangle changes color on hover.                            |
+| **c** = {bool}         | Collapse the rectangle if bool hook is *true*, otherwise show. |
+| **s** = {size}         | Size of the rectangles free dimension. (Any valid css size format) |
+| **ns**                 | Prevent scrolling for the given rectangle.                   |
+| **d**                  | Show on desktop only.                                        |
+| **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
+| **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 
-
-
-#### Helpful Additional Built-In Components
+#### nal Built-In Components
 
 | Component         | Uses                                                         |
 | ----------------- | ------------------------------------------------------------ |
