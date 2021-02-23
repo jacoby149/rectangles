@@ -32,7 +32,7 @@ function App(){
                 </C>
                 
                 <C l ns d s = {"120px"}>
-                    <h3>Plainpad<br/> Design Copy</h3>
+                    <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
                 </C>
                 
                 
@@ -75,7 +75,11 @@ function App(){
                         <Note>Note 8 :)</Note> 
                     </R>
                     <R t>
-                        <C s={"130px"}> <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js</C>
+                        <C s={"130px"}> 
+                        <div style={{fontFamily:"monospace"}}>
+                            <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
+                        </div>
+                        </C>
                     </R>
                 </R>
 
