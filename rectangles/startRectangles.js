@@ -1,3 +1,3 @@
-ReactDOM.render(<App />,app);
+ReactDOM.render(<R><App /></R>,app);
 /* Start Telescope.js */
 startTelescope();
