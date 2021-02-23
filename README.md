@@ -86,7 +86,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **s** = {size}         | Size of the rectangles free dimension. (Any valid css size format) |
 | **ns**                 | Prevent scrolling for the given rectangle.                   |
 | **mc**                 | Collapse on mobile                                           |
-| **spc**                | Don't show on a sideways phone.                              |
+| **msc**                | Don't show on a sideways phone.                              |
 | **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 | **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 
