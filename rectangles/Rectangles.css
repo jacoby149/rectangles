@@ -34,6 +34,14 @@ body{
     border-color:#a8b2b9;
 }
 
+.R .light .h:hover{
+  background-color:#a8b2b9;
+}
+.R .light{
+    border-color:#4b5a65;
+}
+
+
 .R{
     font-size:10pt;
     border-width:1px;
@@ -48,7 +56,6 @@ body{
 .R textarea,.R input{
   background-color:#00000000;
   border: 0pt;
-  color:white;
 }
 
 .R input,.R textarea:focus {
