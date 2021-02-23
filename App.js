@@ -77,8 +77,8 @@ function App(){
                         <Note>Note 8 :)</Note> 
                     </R>
 
-                    <R t msc>
-                        <C s={"130px"}> 
+                    <R t>
+                        <C s={"70px"}> 
                         <div style={{fontFamily:"monospace"}}>
                             <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
                         </div>
