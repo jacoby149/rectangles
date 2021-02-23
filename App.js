@@ -3,7 +3,7 @@
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
 function Note(props){
     return (
-        <C h s={"50px"} ps = {props.ps}>
+        <C h s={"50px"} {...props}>
             {props.children}
         </C>
     )
