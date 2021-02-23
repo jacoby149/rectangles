@@ -1,11 +1,13 @@
 /* Plain Pad app made of entirely rectangles.js components */
 function App(){
 
+
     /* Menu Collapsed State */
     const [collapse,setCollapse] = React.useState(false);
     function toggleCollapse(){
         setCollapse(!collapse);
     }
+
 
     /* Theme Color State */
     const [theme,setTheme] = React.useState("dark")
@@ -14,6 +16,8 @@ function App(){
         else {setTheme("dark")}
     }
 
+
+    /* The App Component */
     return (
         <R root t bt bb br bl theme={theme}>
         {/* This is the root rectangle ^^^ */}
