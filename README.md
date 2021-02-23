@@ -2,15 +2,13 @@
 
 
 
-#### Demo : 
+## Demo :  <a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app</a>
 
-<a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app</a>
-
-(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project.)
+(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project. All the code is in *App.js*) 
 
 
 
-#### Summary :
+## Summary :
 
 Rectangles is a front end design system that enforces *glitch-free*, *responsive* apps.
 
@@ -23,7 +21,7 @@ https://reactjs.org/docs/add-react-to-a-website.html
 
 
 
-#### Web Hosting Advice (Deployment):
+## Web Hosting Advice (Deployment):
 
 React requires CORS. You can't just click *index.html* and view it locally to see the demo.
 
@@ -33,7 +31,7 @@ GitHub Pages has trouble hosting Rectangles projects ( Or any *no JSX* project) 
 
 
 
-#### Local Hosting Advice For Starting Web Developers (Development) :
+## Local Hosting Advice For New Web Developers :
 
 If you are new to web development, I recommend installing <a href="https://www.php.net/manual/en/install.php">PHP</a>. 
 
@@ -51,7 +49,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 
 
-#### Overview (The Rectangles Standard In 13 Steps) : 
+## Overview (The Rectangles Standard In 13 Steps) : 
 
 1. Rectangles projects are written entirely in an App.js file within a React component called App.
 2. The index.html body has an App component rendered into it.
@@ -69,7 +67,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 
 
-#### Attributes special to the Rectangle(R) Component. 
+## Attributes special to the Rectangle(R) Component. 
 
 | Attributes             | Effect                                                       |
 | :--------------------- | ------------------------------------------------------------ |
@@ -91,7 +89,9 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 | **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 
-#### nal Built-In Components
+
+
+## Built-In Components
 
 | Component         | Uses                                                         |
 | ----------------- | ------------------------------------------------------------ |
@@ -100,7 +100,3 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **Table/Card(T)** | Content sub class that is a collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format with search and sort functionality. |
 
 
-
-#### Example :
-
-See the included repository file : *App.js*
