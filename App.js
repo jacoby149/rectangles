@@ -59,8 +59,9 @@ function App(){
             <R tel l>
 
                 <R t ns br c={collapse} s= {"240px"}>
-                    <R s = {"50px"}>
-                    <C h><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"5em",marginLeft:"10%"}}/></C>    
+                    <R l s = {"50px"}>
+                    <C h s={"100px"}><h4>Search Bar : </h4></C>
+                    <T tel>Search..</T>    
                     </R>        
                     <R tel bb bt t>
                         <Note>Note 0 :)</Note> 

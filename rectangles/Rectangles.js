@@ -1,7 +1,7 @@
 function T(props){
   return(
   <C {...props}>
-    <textarea className = {"R " + props.theme} style={{paddingTop:"10px",height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
+    <textarea className = {"R " + props.theme} style={{paddingTop:"18px",height:"100%",width:"100%",resize:"none"}} placeholder={props.children}></textarea>
   </C>
   )
 }
