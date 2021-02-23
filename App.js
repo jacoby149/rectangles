@@ -1,3 +1,14 @@
+
+/* A custom sub class of Content(C). (Which makes it a subclass of (R))
+/* For Custom Rectangle subclasses, make sure to pass props.ps through. */
+function Note(props){
+    return (
+        <C h s={"50px"} ps = {props.ps}>
+            {props.children}
+        </C>
+    )
+}
+
 /* App made of entirely rectangle components */
 function App(){
     const [collapse,setCollapse] = React.useState(false);
@@ -39,17 +50,16 @@ function App(){
                     <R s = {"50px"}>
                     <C h><h4>Search Bar : </h4><input placeholder="..." style={{display:"inline",width:"5em",marginLeft:"10%"}}/></C>    
                     </R>        
-                    <R tel bb bt t> 
-                        <C h s={"50px"}>Note 1 :) </C>
-                        <C h s={"50px"}>Note 2 :)</C>
-                        <C h s={"50px"}>Note 3 :)</C>
-                        <C h s={"50px"}>Note 4 :)</C>
-                        <C h s={"50px"}>Note 5 :)</C>
-                        <C h s={"50px"}>Note 6 :)</C>
-                        <C h s={"50px"}>Note 7 :)</C>
-                        <C h s={"50px"}>Note 8 :)</C>
-                        <C h s={"50px"}>Note 9 :)</C>
-                        <C h s={"50px"}>Note 10 :)  </C>
+                    <R tel bb bt t>
+                        <Note>Note 0 :)</Note> 
+                        <Note>Note 1 :)</Note> 
+                        <Note>Note 2 :)</Note> 
+                        <Note>Note 3 :)</Note> 
+                        <Note>Note 4 :)</Note> 
+                        <Note>Note 5 :)</Note> 
+                        <Note>Note 6 :)</Note> 
+                        <Note>Note 7 :)</Note> 
+                        <Note>Note 8 :)</Note> 
                     </R>
                     <R t>
                         <C s={"200px"}> <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;Copy in Rectangles.js</C>
