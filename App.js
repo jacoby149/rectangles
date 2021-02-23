@@ -74,7 +74,7 @@ function App(){
                         <Note>Note 8 :)</Note> 
                     </R>
                     <R t>
-                        <C s={"200px"}> <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;Copy in Rectangles.js</C>
+                        <C s={"130px"}> <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;Copy in Rectangles.js</C>
                     </R>
                 </R>
 
