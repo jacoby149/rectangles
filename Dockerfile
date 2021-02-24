@@ -5,6 +5,5 @@ WORKDIR /var/www/html
 COPY rectangles/vhost.conf /etc/apache2/sites-available/000-default.conf
 RUN chown -R www-data:www-data /var/www/html && a2enmod rewrite
 COPY . .
-RUN ls
 RUN chmod -R 777 /var/www/html
 EXPOSE 80
