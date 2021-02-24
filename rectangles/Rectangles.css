@@ -13,7 +13,7 @@ html{
 body{
     padding:0;
     margin:0;
-    background-color:black;
+    background-color: #000000;
 }
 
 .app{
@@ -54,6 +54,7 @@ body{
   background-color:#a8b2b9;
 }
 .R .light{
+    background-color:#ffffff;
     border-color:#4b5a65;
 }
 
