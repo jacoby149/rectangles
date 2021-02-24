@@ -93,7 +93,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 | **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 
-
+<br>
 
 ## Built-In Components
 
