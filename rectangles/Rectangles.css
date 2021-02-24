@@ -1,6 +1,6 @@
 
 #rectangleslogo{
-  animation: rectangleslogoanimation 1s infinite;
+  animation: rectangleslogoanimation .44s infinite;
 }
 
 @keyframes rectangleslogoanimation {
