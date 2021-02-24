@@ -1,0 +1,19 @@
+/* Splash Animation */
+#rlc{
+    font-family:monospace;
+    color:white;
+    position:absolute;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+#rlc img{
+    height:200px;
+    animation: rla .75s infinite;
+}
+
+@keyframes rla {0% {opacity: 0.5;}50% {opacity: 1;}100% {opacity: 0.5;}}
