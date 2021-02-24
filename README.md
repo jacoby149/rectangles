@@ -6,7 +6,7 @@
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project. All the code is in *App.js*) 
 
-
+<br>
 
 ## Summary :
 
@@ -14,7 +14,7 @@ Rectangles is a front end design system that enforces *glitch-free*, *responsive
 
 Rectangles layouts are *formulaic*, meaning identical layouts imply Identical code.
 
-
+<br>
 
 ## Ingredients :
 
@@ -23,7 +23,7 @@ Rectangles is built on *no JSX* React, so npm is not a requirement.
 (See this link to learn more about *no JSX* React.)
 https://reactjs.org/docs/add-react-to-a-website.html
 
-
+<br>
 
 ## Web Hosting Advice (Deployment):
 
@@ -33,7 +33,7 @@ You need to host the site via http:// or https://.
 
 GitHub Pages has trouble hosting Rectangles projects ( Or any *no JSX* project) . Use <a href = "https://www.netlify.com/">Netlify</a>.
 
-
+<br>
 
 ## Local Hosting Advice For New Web Developers :
 
@@ -51,7 +51,7 @@ Then, go to localhost:8000 in your browser to view the project.
 
 Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
-
+<br>
 
 ## Overview (The Rectangles Standard In 13 Steps) : 
 
@@ -69,7 +69,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 12. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
 13. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
 
-
+<br>
 
 ## Attributes special to the Rectangle(R) Component. 
 
