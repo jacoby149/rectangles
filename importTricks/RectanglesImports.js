@@ -1,1 +1,0 @@
-ReactDOM.render(<Imports/>,imports);
