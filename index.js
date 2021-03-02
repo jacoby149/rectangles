@@ -1,3 +1,4 @@
+
 import {pass,R,C,T} from './rectangles/Rectangles.js'
 
 /* Plain Pad app made of entirely rectangles.js components */
