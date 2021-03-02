@@ -46,27 +46,22 @@
 
 
         <!-- Non-React JS -->
+        <script src='rectangles/loadComp.js'></script>
         <script src='rectangles/telescope.js'></script>
 
 
         <!-- Put JS for your custom components here! -->
 
 
-        <!-- Component JS -->
-        <script>var jsxRectangles = false;</script>
+        <script>
+            /* Load Components */
+            loadComp('rectangles/Rectangles.js');
+            loadComp('App.js');
+            /* Start Rectangles */
+            loadComp('rectangles/startRectangles.js');
+        </script>
 
 
-        <script data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel"
-            src='rectangles/Rectangles.js'></script>
-
-
-        <script data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel"
-            src='App.js'></script>
-
-
-        <!-- Start Rectangles-->
-        <script data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel"
-            src='rectangles/startRectangles.js'></script>
     </body>
 
 </html>
