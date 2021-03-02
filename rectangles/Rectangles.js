@@ -117,3 +117,5 @@ function R(props){
         </div>
     )
 }
+
+export {pass,R,C,T};

@@ -17,6 +17,7 @@ services:
     command: ["npm", "start"]
     volumes:
       - ./client:/frontend
+      - ./:/frontend/
       - node-modules:/frontend/node_modules
     environment:
       - NODE_ENV=development
