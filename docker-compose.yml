@@ -16,6 +16,7 @@ services:
     build: merlin/client
     volumes:
       - ./merlin/client:/frontend
+      - ./:/frontend/src
       - node-modules:/frontend/node_modules
     environment:
       - NODE_ENV=development
