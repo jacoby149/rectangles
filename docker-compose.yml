@@ -12,20 +12,6 @@ services:
     ports:
       - "5000:5000"
 
-  client:
-    build: merlin/client
-    volumes:
-      - ./merlin/client:/frontend
-      - ./:/frontend/src
-      - node-modules:/frontend/node_modules
-    environment:
-      - NODE_ENV=development
-    ports:
-      - '3000:3000'
-    depends_on:
-      - api
-    command: ["npm", "start"]
-
   nojsxclient:
     build: .
     volumes:
@@ -34,7 +20,4 @@ services:
       - '80:80'
     depends_on:
       - api
-
-volumes:
-  node-modules:
 
