@@ -39,6 +39,18 @@ body{
 
 }
 
+.R .brick{
+  color:white;
+}
+.R .brick .h:hover{
+  background-color:#580a0a;
+}
+.R .brick{
+    background-color:#380606;
+    border-color:#cc9292;
+}
+
+
 .R .dark{
   color:white;
 }
