@@ -37,7 +37,7 @@ function telescope(div){
 }
 
 function startTelescope(){
-    window.onresize = function(e) {telescope(app);};
-    app.onclick = function(e){telescope(app);};
+    window.onresize = () => telescope(app);
+    app.onclick = () => telescope(app);
     telescope(app);
 }

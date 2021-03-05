@@ -420,7 +420,7 @@ function Branding(props){
         <R l {...pass(props)}>
 
             <C l ns s = {"70px"}>{/* Plain Pad Logo */}
-                <img src = {"rectangles/d.png"} style={{height:"60%",margin:"20%"}} />
+                <img src = {"rectangles/d.png"} style={{height:"50%",margin:"25%"}} />
             </C>
             
             <C l ns mc s = {"100px"}>
