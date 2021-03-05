@@ -75,7 +75,7 @@ function Dash(){
 
 function D(props){
     return(
-<div style={{display:'block'}}>
+<div>
         <table class="table" style={{  borderRadius: "13px" 
 }}>
   <thead>
@@ -374,7 +374,6 @@ function D(props){
     </tr>
   </tbody>
 </table>
-&nbsp;
 </div>
 
     )
