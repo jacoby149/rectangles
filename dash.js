@@ -4,7 +4,6 @@ import {pass,R,C,T} from './rectangles/Rectangles.js'
 /* Plain Pad app made of entirely rectangles.js components */
 function Dash(){
 
-
     /* Menu Collapsed State */
     const [collapse,setCollapse] = React.useState(false);
     function toggleCollapse(){
@@ -31,10 +30,10 @@ function Dash(){
                 <Branding />                                
                 <Icon l ns onClick={toggleCollapse}>bars</Icon>
                 <R tel />
-                <R l ns s = {"150px"}>
+                <R l ns s = {"160px"}>
                     <Icon>user-circle</Icon>
                     <Icon onClick={toggleTheme}>moon</Icon>
-                    <Icon>file</Icon>
+                    <Icon >file</Icon>
                 </R>
             </R>  
             
@@ -420,11 +419,11 @@ function Branding(props){
     return(
         <R l {...pass(props)}>
 
-            <C l ns p = "0 0 0 30" s = {"70px"}>{/* Plain Pad Logo */}
-                <img src = {"rectangles/d.png"} style={{height:"60%",margin:"20%",float:"right"}} />
+            <C l ns s = {"70px"}>{/* Plain Pad Logo */}
+                <img src = {"rectangles/d.png"} style={{height:"60%",margin:"20%"}} />
             </C>
             
-            <C l ns mc s = {"120px"}>
+            <C l ns mc s = {"100px"}>
                 <div style={{fontFamily:"monospace"}}><h3>Dash<br/> Data Viewer</h3></div>
             </C>
 

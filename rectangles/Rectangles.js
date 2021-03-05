@@ -41,8 +41,8 @@ function C(props){
 
 /* The Rectangle component */
 function R(props){
-    
-    /* Append dictionaries */
+  
+  /* Append dictionaries */
     function a(x,y){
         return {...x,...y};
     }
@@ -60,10 +60,8 @@ function R(props){
     if (r){side="right"};
     
     
-    if (l){style=a(style,{writingMode:"vertical-lr"})}
-    else if (r){style=a(style,{writingMode:"vertical-rl"})}
-    else if (t){style=a(style,{writingMode:"horizontal-tb"})}
-    else if (b){style=a(style,{writingMode:"horizontal-bt"})}
+    if (l || r){style=a(style,{writingMode:"vertical-lr"})}
+    else if (t || b){style=a(style,{writingMode:"horizontal-tb"})}
 
     /* Border sides */
     const [bt,bb,bl,br] = [props.bt,props.bb,props.bl,props.br];

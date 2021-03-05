@@ -31,7 +31,7 @@ function Plainpad(){
                 <Branding />                                
                 <Icon l ns onClick={toggleCollapse}>bars</Icon>
                 <R tel />
-                <R l ns s = {"150px"}>
+                <R l ns s = {"160px"}>
                     <Icon>user-circle</Icon>
                     <Icon onClick={toggleTheme}>moon</Icon>
                     <Icon>file</Icon>
@@ -111,13 +111,13 @@ function Branding(props){
     return(
         <R l {...pass(props)}>
             
-            <C p = "0 0 0 30px" l ns s = {"70px"}>{/* Plain Pad Logo */}
-                <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%",float:"right"}} />
-            </C>
-            
-            <C l ns mc s = {"120px"}>
-                <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
-            </C>
+                <C l ns s = {"70px"}>{/* Plain Pad Logo */}
+                    <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"20%"}} />
+                </C>
+                
+                <C l ns mc s = {"120px"}>
+                    <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
+                </C>
 
         </R>
     )
