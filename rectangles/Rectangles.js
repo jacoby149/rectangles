@@ -22,7 +22,7 @@ function T(props){
 function C(props){
     const ha = props.ha?props.ha:"left";
     const va = props.va?props.va:"center";
-    const p = props.p?props.p:"0 0 0 10";
+    const p = props.p?props.p:"0 0 0 15";
     return (
         <R {...pass(props)}>
             <R tel t h={props.h}>
