@@ -97,10 +97,16 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 ## Built-In Components
 
-| Component         | Uses                                                         |
-| ----------------- | ------------------------------------------------------------ |
-| **Content(C)**    | Rectangle sub class with easy to position internal content.  |
-| **Input(I)**      | Content sub class that is a Minimalist text entry field.     |
-| **Table/Card(T)** | Content sub class that is a collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format with search and sort functionality. |
+| Component       | Uses                                                         |
+| --------------- | ------------------------------------------------------------ |
+| **Content(C)**  | Rectangle sub class with easy to position internal content.  |
+| **Input(T)**    | Content sub class that is a Minimalist text entry field.     |
+| **Dataview(D)** | Content sub class that is a collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format with search and sort functionality. |
+
+| Content (C) Attribute             | Effect                                     |
+| --------------------------------- | ------------------------------------------ |
+| **ha** = {Left,Center,or Right}   | Horizontal Alignment in content rectangle. |
+| **va** = {Top, Bottom, or Center} | Vertical alignment of content in rectangle |
+| **p** = {tp rp bp lp}             | Change the padding                         |
 
 
