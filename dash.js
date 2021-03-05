@@ -48,7 +48,7 @@ function Dash(){
                         <C h s={"100px"}>
                             <h4>Search Bar : </h4>
                         </C>
-                        <T tel>Search...</T>    
+                        <T tel ns>Search...</T>    
                     </R>        
                     <R tel bb bt t>
                         <ListItem>Table 1</ListItem> 
@@ -419,8 +419,8 @@ function Branding(props){
     return(
         <R l {...pass(props)}>
 
-            <C l ns s = {"70px"}>{/* Plain Pad Logo */}
-                <img src = {"rectangles/d.png"} style={{height:"50%",margin:"25%"}} />
+            <C l p = "0 0 0 25" s = {"70px"}>{/* Plain Pad Logo */}
+                <img src = {"rectangles/d.png"} style={{height:"50%"}} />
             </C>
             
             <C l ns mc s = {"100px"}>

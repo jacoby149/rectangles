@@ -49,7 +49,7 @@ function Plainpad(){
                         <C h s={"100px"}>
                             <h4>Search Bar : </h4>
                         </C>
-                        <T tel>Search...</T>    
+                        <T tel ns>Search...</T>    
                     </R>        
                     <R tel bb bt t>
                         <Note>Note 1 :)</Note> 
@@ -111,8 +111,8 @@ function Branding(props){
     return(
         <R l {...pass(props)}>
             
-                <C l ns s = {"70px"}>{/* Plain Pad Logo */}
-                    <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%",margin:"19%"}} />
+                <C l p = "0 0 0 22" s = {"70px"}>{/* Plain Pad Logo */}
+                    <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%"}} />
                 </C>
                 
                 <C l ns mc s = {"120px"}>
