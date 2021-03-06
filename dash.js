@@ -74,7 +74,8 @@ function Dash(){
 
 function D(props){
     return(
-<div>
+<div style={{  borderRadius: "13px", border:"solid" ,backgroundColor:"white" 
+}}>
         <table class="table" style={{  borderRadius: "13px" 
 }}>
   <thead>
