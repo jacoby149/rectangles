@@ -12,7 +12,7 @@
 
 Rectangles is a front end design system that enforces *glitch-free*, *responsive* apps.
 
-Rectangles layouts are *formulaic*, meaning identical layouts imply Identical code.
+The Rectangles framework aims to decrease the number of ways to make the same layout in different ways by enforcing strict rules which rectangles objects follow.
 
 <br>
 
@@ -37,14 +37,12 @@ GitHub Pages has trouble hosting Rectangles projects ( Or any *no JSX* project) 
 
 ## Local Hosting Advice For New Web Developers :
 
-If you are new to web development, I recommend installing <a href="https://www.php.net/manual/en/install.php">PHP</a>. 
-
-I don't write apps in PHP. I use PHP's server utility to locally host my static web projects.
+If you are new to web development, I recommend installing python. 
 
 Open a terminal, navigate to your project folder, and run this command to host locally via http:// :
 
 ```
-php -S localhost:8000
+python -m http.server
 ```
 
 Then, go to localhost:8000 in your browser to view the project. 
@@ -108,5 +106,4 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **ha** = {Left,Center,or Right}   | Horizontal Alignment in content rectangle. |
 | **va** = {Top, Bottom, or Center} | Vertical alignment of content in rectangle |
 | **p** = {tp rp bp lp}             | Change the padding                         |
-
 
