@@ -88,6 +88,7 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **ns**                 | Prevent scrolling for the given rectangle.                   |
 | **mc**                 | Collapse on mobile.                                          |
 | **msc**                | Collapse on landscape mobile.                                |
+| **nottel**             | set to rectangles with a set size. (default)                 |
 | **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 | **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 

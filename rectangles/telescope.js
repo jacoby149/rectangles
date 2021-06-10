@@ -1,39 +1,32 @@
-
-function dimDiff(nottel){
-    var [w,h]=[0,0];
-    for (var i = 0; i < nottel.length; i++) {
-        var child = nottel[i];
-        [w,h]=[w+child.offsetWidth,h+child.offsetHeight];
+//adjusts the size of a telescopic element to accomodate its siblings.
+function adjustToSiblings(tel,sibs,floatSide){
+    const telescopicElement = tel[0];         
+    if (floatSide == "left" || floatSide == "right")  {
+        var remainingWidth = sibs.reduce((accumulator,child)=>accumulator + child.offsetWidth,0);
+        telescopicElement.style.width = `calc(100% - ${remainingWidth}px)`;;
     }
-    return ["calc(100% - " + w + "px)","calc(100% - " + h + "px)"];
+    else if (floatSide == "top" || floatSide == "bottom"){
+        var remainingHeight = sibs.reduce((accumulator,child)=>accumulator + child.offsetHeight,0)
+        telescopicElement.style.height = `calc(100% - ${remainingHeight}px)`;;
+    }
+    else 
+        console.error("telescope.js side error, neither horizontal or vertical");
+
 }
 
+// recursively adjust the webpage based on window size change
 function telescope(div){
     const children = [...div.childNodes].filter(e=> e.classList.contains("R"));
-    const nottel = [...children].filter(e => e.classList.contains("nottel"));
     const tel = [...children].filter(e =>  e.classList.contains("tel"));
-    /* Do some telescoping */
-    if (tel.length == 1){
-        const t = tel[0];
-        const [dwidth,dheight] = dimDiff(nottel)
-        const side = div.getAttribute('childfloat');
-        const h = side=="left" || side=="right";
-        const v = side=="top" || side=="bottom";
-        if (h) { t.style.width = dwidth;}
-        else if (v){ t.style.height = dheight;}
-    }
+    const sibs = [...children].filter(e =>  e.classList.contains("nottel"));
+    const floatSide = div.getAttribute('childfloat'); 
 
-    /* Alert Multi Telescope Issue */
-    if (tel.length > 1){
-        console.log("Warning. too many telescopic rects.");return;
-    }
 
-    /* Recurse */
-    for (var i = 0; i < children.length; i++) {
-        const child = children[i]
-        telescope(child);
-    }
+    if (tel.length == 1) adjustToSiblings(tel,sibs,floatSide)
+    else if (tel.length > 1) console.error("Warning. too many telescopic rects.");
 
+    /* always recurse */
+    children.map((child)=>telescope(child));
 }
 
 function startTelescope(){
