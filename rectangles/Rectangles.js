@@ -42,50 +42,49 @@ function C(props){
 /* The Rectangle component */
 function R(props){
   
-  /* Append dictionaries */
+    /* concatenate dictionaries */
     function a(x,y){
         return {...x,...y};
     }
 
-    /* Style Dictionary */
-    var style = {}
+    /* style dictionary */
+    var style = {};
 
-    /* Float */
+    /* float */
     const [t,b,l,r] = [props.t,props.b,props.l,props.r];
-    var side = "top"
+    var side = "top";
     if ((t+b+l+r) > 1) console.log("warning conflicting tblrs ! ");
-    if (t){side="top"};
-    if (b){side="bottom"};
-    if (l){side="left"};
-    if (r){side="right"};
+    if (t){side="top";}
+    if (b){side="bottom";}
+    if (l){side="left";}
+    if (r){side="right";}
     
     
-    if (l || r){style=a(style,{writingMode:"vertical-lr"})}
-    else if (t || b){style=a(style,{writingMode:"horizontal-tb"})}
+    if (l || r){style=a(style,{writingMode:"vertical-lr"});}
+    else if (t || b){style=a(style,{writingMode:"horizontal-tb"});}
 
-    /* Border sides */
+    /* border sides */
     const [bt,bb,bl,br] = [props.bt,props.bb,props.bl,props.br];
-    if (bt){ style=a(style,{ borderTopStyle: "solid" } ) };
-    if (bb){ style=a(style,{ borderBottomStyle: "solid" } ) };
-    if (bl){ style=a(style,{ borderLeftStyle: "solid" } ) };
-    if (br){ style=a(style,{ borderRightStyle: "solid" } ) };
+    if (bt){style=a(style,{borderTopStyle:"solid"});}
+    if (bb){style=a(style,{borderBottomStyle:"solid"});}
+    if (bl){style=a(style,{borderLeftStyle:"solid"});}
+    if (br){style=a(style,{borderRightStyle:"solid"});}
 
-    /* noscroll Shouldn't be needed....*/
-    if (props.ns){style=a(style,{overflow:"hidden"})}
+    /* noscroll shouldn't be needed....*/
+    if (props.ns){style=a(style,{overflow:"hidden"});}
+    if (props.h){style=a(style,{});}
 
-    if (props.h){style=a(style,{})}
-
-    /* Rect Size */
-    const v = (!props.ps || props.ps == "top" || props.ps == "bottom")
+    /* rect size */
+    const v = (!props.ps || props.ps == "top" || props.ps == "bottom");
     var [s,ms] = [props.s,props.ms];
 
     if (!props.root){
-        if (!s){s="auto"}
-        if (v){style= a(style,{height:s,width:"100%"} )} /* for now */
-        else {style=a(style,{width:s,height:"100%"})}
+        if (!s){s="auto";}
+        if (v){style= a(style,{height:s,width:"100%"} );} /* for now */
+        else {style=a(style,{width:s,height:"100%"});}
     }
 
-    /* Pass float orientation to children */
+    /* pass float orientation to children */
     const updatedChildren = React.Children.map(
       props.children,
       (child, i) => {
@@ -97,23 +96,24 @@ function R(props){
       }
     );
 
-    /* if Collapsed */
-    if (props.c){style= a(style,{display:"none"} )} /* for now */
+    /* if collapsed */
+    if (props.c){
+      style= a( style,{display:"none"} );
+    } /* for now */
 
     
-    const isTel = props.tel?"tel ":"nottel ";
-    const isHover = props.h?"h ":"";
-    const ismc = props.mc?"mc ":""
-    const ismsc = props.msc?"msc ":""
-    const root = props.root?"root ":""
+    const isTel = props.tel ? "tel ":"nottel ";
+    const isHover = props.h ? "h ":"";
+    const ismc = props.mc ? "mc ":"";
+    const ismsc = props.msc ? "msc ":"";
+    const root = props.root ? "root ":"";
     const theme = props.theme + " ";
 
-    const className = "R " + root + theme + isTel + isHover +ismc +ismsc+ props.className
+    const className = "R " + root + theme + isTel + isHover +ismc +ismsc+ props.className;
     return (
-        <div childfloat={side} 
+        <div childfloat={side}
             className = {className}
                 style = {{...style,...props.style}}>
-        
             {updatedChildren}
         
         </div>
