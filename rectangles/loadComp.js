@@ -7,7 +7,8 @@ function loadComp(url)
     script.setAttribute('data-plugins', "transform-modules-umd");
     script.setAttribute('data-presets', "react");
     script.setAttribute('data-type',"module");
-    if (url[0]=='/') url = window.location.hostname + url;
+    if (url[0]=='/') url = window.location.protocol + "//" + window.location.host + url;
+    console.log(url)
     script.src = url;
     head.appendChild(script);
 }
