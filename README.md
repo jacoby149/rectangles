@@ -2,7 +2,7 @@
 
 
 
-## Demo :  <a href="https://plainpaddemo.netlify.app">https://plainpaddemo.netlify.app</a>
+## Demo :  <a href="https://jacobhoffman.tk/rectangles">https://jacobhoffman.tk/rectangles</a>
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project. All the code is in *App.js*) 
 
