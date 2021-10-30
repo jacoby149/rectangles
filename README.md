@@ -18,7 +18,7 @@ Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">htt
 
 <br>
 
-## 
+
 
 ## Summary :
 
