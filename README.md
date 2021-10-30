@@ -1,4 +1,4 @@
-# <img src="Rectangles.jpg" style="image-rendering:pixelated;"></img> Rectangles.js Framework 
+# <img src="Rectangles.jpg" style="image-rendering:pixelated;" /> Rectangles.js Framework 
 
 
 
