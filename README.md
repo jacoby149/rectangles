@@ -32,9 +32,6 @@ The Rectangles framework aims to decrease the number of ways to make the same la
 
 Rectangles projects use Babel in browser transpiled react, so npm is not a requirement.
 
-(See this link to learn more about *no JSX* React.)
-https://reactjs.org/docs/add-react-to-a-website.html
-
 <br>
 
 ## Web Hosting Advice (Deployment):
