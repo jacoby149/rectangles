@@ -2,11 +2,23 @@
 
 
 
-## Demo :  <a href="https://jacobhoffman.tk/rectangles_demo">https://jacobhoffman.tk/rectangles_demo</a>
+## Demo 1 :  <a href="https://jacobhoffman.tk/rectangles_demo">https://jacobhoffman.tk/rectangles_demo</a>
 
-(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project. All the code is in *App.js*) 
+Source Code : <a href="https://www.github.com/jacoby149/rectangles_demo">https://www.github.com/jacoby149/rectangles_demo</a>
+
+(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
 
 <br>
+
+## Demo 2 :  <a href="https://jacobhoffman.tk/rectangles_demo">https://jacobhoffman.tk/rock_paper_scissors</a>
+
+Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">https://www.github.com/jacoby149/rock_paper_scissors</a>
+
+(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
+
+<br>
+
+## 
 
 ## Summary :
 
@@ -18,7 +30,7 @@ The Rectangles framework aims to decrease the number of ways to make the same la
 
 ## Ingredients :
 
-Rectangles is built on *no JSX* React, so npm is not a requirement.
+Rectangles projects use Babel in browser transpiled react, so npm is not a requirement.
 
 (See this link to learn more about *no JSX* React.)
 https://reactjs.org/docs/add-react-to-a-website.html
@@ -31,7 +43,9 @@ React requires CORS. You can't just click *index.html* and view it locally to se
 
 You need to host the site via http:// or https://. 
 
-GitHub Pages has trouble hosting Rectangles projects ( Or any *no JSX* project) . Use <a href = "https://www.netlify.com/">Netlify</a>.
+GitHub Pages can host Rectangles projects.
+
+DNS proxying can prevent Rectangles apps from working, I've had some prior trouble with Cloud Flare
 
 <br>
 
@@ -39,7 +53,9 @@ GitHub Pages has trouble hosting Rectangles projects ( Or any *no JSX* project) 
 
 If you are new to web development, I recommend installing python. 
 
-Open a terminal, navigate to your project folder, and run this command to host locally via http:// :
+To get started, download either of the Rectangles Demo Projects to your computer.
+
+Open a terminal, navigate to the project folder, and run this command to host locally via http:// :
 
 ```
 python -m http.server
@@ -53,19 +69,20 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 ## Overview (The Rectangles Standard In 13 Steps) : 
 
-1. Rectangles projects are written entirely in an App.js file within a React component called App.
-2. The index.html body has an App component rendered into it.
-3. App is comprised of rectangles.
-4. The main rectangle (root rectangle) is a viewport sized Rectangle with className = "root".
-5. The root rectangle is the only rectangle that has no free dimensions.
-6. All non root rectangles have 1 free dimension that can be resized with the s={size} attribute.
-7. All rectangles have a child float attribute that controls where children rectangles float. (t, l, b,or r)
-8. If a rectangle has a parent with the t or b attribute, its width is the free dimension.
-9. If a rectangle has a parent with the l or r attribute, its height is the free dimension.
-10. Rectangles are defaulted with the t attribute if they don't have t, l, b or r.
-11.  Amongst sibling rectangles, one of them is allowed to be telescopic.
-12. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
-13. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
+1. Rectangles projects are written entirely within a React component called App.
+2. All rectangles projects have an index.html. In the body there is an App component rendered into it.
+3. All react components are loaded in at the bottom of the index.html file with the loadComp function.
+4. App is comprised of rectangles.
+5. The main rectangle (root rectangle) is a viewport sized Rectangle with className = "root".
+6. The root rectangle is the only rectangle that has no free dimensions.
+7. All non root rectangles have 1 free dimension that can be resized with the s={size} attribute.
+8. All rectangles have a child float attribute that controls where children rectangles float. (t, l, b,or r)
+9. If a rectangle has a parent with the t or b attribute, its width is the free dimension.
+10. If a rectangle has a parent with the l or r attribute, its height is the free dimension.
+11. Rectangles are defaulted with the t attribute if they don't have t, l, b or r.
+12. Amongst sibling rectangles, one of them is allowed to be telescopic.
+13. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
+14. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
 
 <br>
 
