@@ -62,7 +62,6 @@ function Plainpad(){
 
                 {/* Writing Pane */}
                 <R tel t >
-                    <button class="Button">heheee</button>
                     <T tel>Write a note here...</T>
                 </R>
 
