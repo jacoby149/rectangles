@@ -2,7 +2,7 @@
 
 
 
-## Demo :  <a href="https://jacobhoffman.tk/rectangles">https://jacobhoffman.tk/rectangles</a>
+## Demo :  <a href="https://jacobhoffman.tk/rectangles_demo">https://jacobhoffman.tk/rectangles_demo</a>
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">this</a> project. All the code is in *App.js*) 
 
