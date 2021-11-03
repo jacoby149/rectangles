@@ -10,7 +10,7 @@ Source Code : <a href="https://www.github.com/jacoby149/rectangles_demo">https:/
 
 <br>
 
-## Demo 2 :  <a href="https://jacobhoffman.tk/rectangles_demo">https://jacobhoffman.tk/rock_paper_scissors</a>
+## Demo 2 :  <a href="https://jacobhoffman.tk/rock_paper_scissors">https://jacobhoffman.tk/rock_paper_scissors</a>
 
 Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">https://www.github.com/jacoby149/rock_paper_scissors</a>
 
