@@ -1,3 +1,4 @@
+import React from 'react';
 
 function pass(props){
   const objectMap = (obj, fn) =>
