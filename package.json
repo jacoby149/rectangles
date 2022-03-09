@@ -1,0 +1,19 @@
+{
+  "name": "rectangles-npm",
+  "version": "1.0.0",
+  "description": "Rectangles is a front end design system that enforces glitch-free, responsive apps.",
+  "main": "Rectangles is a front end design system that enforces glitch-free, responsive apps.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacoby149/rectangles.git"
+  },
+  "author": "Jacob Hoffman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacoby149/rectangles/issues"
+  },
+  "homepage": "https://github.com/jacoby149/rectangles#readme"
+}
