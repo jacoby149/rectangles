@@ -38,4 +38,4 @@ function initTelescope(){
     return telescope
 }
 
-const telescope = initTelescope();
+var telescope = initTelescope();
