@@ -1,5 +1,6 @@
 import r from 'react';
-if (r) var React = r;
+var React = window.React;
+if (r) React = r;
 
 function pass(props){
   const objectMap = (obj, fn) =>
