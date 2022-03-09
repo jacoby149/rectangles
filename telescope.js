@@ -5,7 +5,7 @@ function initTelescope(){
         const telescopicElement = tel[0];         
         if (floatSide == "left" || floatSide == "right")  {
             var remainingWidth = sibs.reduce((accumulator,child)=>accumulator + child.offsetWidth,0);
-            telescopicElement.style.width = `calc(100% - ${remainingWidth}px - 2px)`;;
+            telescopicElement.style.width = `calc(100% - ${remainingWidth}px)`;;
         }
         else if (floatSide == "top" || floatSide == "bottom"){
             var remainingHeight = sibs.reduce((accumulator,child)=>accumulator + child.offsetHeight,0)
