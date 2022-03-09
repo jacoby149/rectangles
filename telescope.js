@@ -1,6 +1,6 @@
 //adjusts the size of a telescopic element to accomodate its siblings.
 function initTelescope(){
-    telescope = {}
+    const telescope = {};
     telescope.adjust = function(tel,sibs,floatSide){
         const telescopicElement = tel[0];         
         if (floatSide == "left" || floatSide == "right")  {
@@ -35,6 +35,7 @@ function initTelescope(){
         root.onclick = () => telescope(root);
         telescope(root);
     }
+    return telescope
 }
 
 const telescope = initTelescope();
