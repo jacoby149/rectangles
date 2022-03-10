@@ -1,6 +1,6 @@
 {
   "name": "rectangles-npm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rectangles is a front end design system that enforces glitch-free, responsive apps.",
   "main": "Rectangles is a front end design system that enforces glitch-free, responsive apps.",
   "scripts": {
