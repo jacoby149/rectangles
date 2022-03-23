@@ -1,20 +1,20 @@
 //adjusts the size of a telescopic element to accomodate its siblings.
 function initTelescope() {
   const telescope = {};
-  telescope.adjust = function (tel, sibs, floatSide) {
+  telescope.adjust = function (tel, sibs, floatSide,hb,vb) {
     const telescopicElement = tel[0];
     if (floatSide == "left" || floatSide == "right") {
       var remainingWidth = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetWidth,
         0
       );
-      telescopicElement.style.width = `calc(100% - ${remainingWidth}px)`;
+      telescopicElement.style.width = `calc(100% - ${remainingWidth + hb}px)`;
     } else if (floatSide == "top" || floatSide == "bottom") {
       var remainingHeight = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetHeight,
         0
       );
-      telescopicElement.style.height = `calc(100% - ${remainingHeight}px)`;
+      telescopicElement.style.height = `calc(100% - ${remainingHeight + vb}px)`;
     } else
       console.error("telescope.js side error, neither horizontal or vertical");
   };
@@ -27,8 +27,9 @@ function initTelescope() {
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
     const floatSide = div.getAttribute("childfloat");
-
-    if (tel.length == 1) telescope.adjust(tel, sibs, floatSide);
+    const hb = (div.hasAttribute("br")?1:0) + (div.hasAttribute("bl")?1:0);
+    const vb = (div.hasAttribute("bt")?1:0) + (div.hasAttribute("bb")?1:0);
+    if (tel.length == 1) telescope.adjust(tel, sibs, floatSide,hb,vb);
     else if (tel.length > 1)
       console.error("Warning. too many telescopic rects.");
 

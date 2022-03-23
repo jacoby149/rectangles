@@ -27,11 +27,6 @@ body{
  .msc
  {display:none;}
 }
-
-.R .root{
-    width:100%;
-    height:100%;
-}
 .R{
   font-size:10pt;
   font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
@@ -42,6 +37,10 @@ body{
   padding:0;
   margin:0;
   overflow: auto;
+}
+.R .root{
+    width:100%;
+    height:100%;
 }
 .R::-webkit-scrollbar {
   width: 9px;               /* width of the entire scrollbar */
