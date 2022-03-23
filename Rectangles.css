@@ -1,6 +1,7 @@
 /* chrome */
 html::-webkit-scrollbar {
   display: none;
+  height:100vh;
 }
 /* firefox */
 html{
