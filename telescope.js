@@ -32,21 +32,12 @@ function initTelescope(){
     }
     telescope.start = function(root){
         
-        const e = () => telescope.telescope(root);
-        window.addEventListener('resize', e);
-        window.addEventListener('focus', e);
-        window.addEventListener('blur', e);
-        window.addEventListener('click', e);
-        window.addEventListener('touch', e);
-
+        window.onresize = () => telescope.telescope(root);
+        window.onfocus = () => telescope.telescope(root);
+        window.onblur = () => telescope.telescope(root);
+        root.onclick = () => telescope.telescope(root);
+        root.ontouch = () => telescope.telescope(root);
         telescope.telescope(root);
-        return ()=>{
-            window.removeEventListener('resize', e);
-            window.removeEventListener('focus', e);
-            window.removeEventListener('blur', e);
-            window.removeEventListener('click', e);
-            window.removeEventListener('touch', e);
-        }
     }
     return telescope
 }
