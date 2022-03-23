@@ -39,20 +39,20 @@ function initTelescope() {
     const e = () => telescope.telescope(root);
     window.addEventListener("resize", e);
     window.addEventListener("click", e);
-    
-    //watch mutations too
-    const observer = new MutationObserver(e);
-    observer.observe(root, {
-      attributes: true,
-      childList: true,
-      subtree: true,
-    });
 
+    document.querySelectorAll('input').forEach(item => {
+        item.addEventListener('blur', e)
+      });
+    
     telescope.telescope(root);
     return () => {
       window.removeEventListener("resize", e);
       window.removeEventListener("click", e);
-      observer.disconnect();
+
+      document.querySelectorAll('input').forEach(item => {
+        item.removeEventListener('blur', e)
+      });
+
     };
   };
   return telescope;
