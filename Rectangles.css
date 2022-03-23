@@ -1,11 +1,11 @@
 /* chrome */
 html::-webkit-scrollbar {
   display: none;
-  height:100vh;
 }
 /* firefox */
 html{
   scrollbar-width: none;
+  height:100vh;
 }
 
 body{
