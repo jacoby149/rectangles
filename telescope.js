@@ -31,13 +31,13 @@ function initTelescope(){
         children.map((child)=>telescope.telescope(child));
     }
     telescope.start = function(root){
-        Object.keys(window).forEach(key => {  
-            if (/^on/.test(key)) {  
-              window.addEventListener(key.slice(2), event => {  
-                telescope.telescope(root);;  
-              });  
-            }  
-          });
+        
+        window.onresize = () => telescope.telescope(root);
+        window.onfocus = () => telescope.telescope(root);
+        window.onblur = () => telescope.telescope(root);
+        root.onclick = () => telescope.telescope(root);
+        root.ontouch = () => telescope.telescope(root);
+        telescope.telescope(root);
     }
     return telescope
 }
