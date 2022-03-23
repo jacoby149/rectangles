@@ -31,7 +31,8 @@ function initTelescope(){
         children.map((child)=>telescope.telescope(child));
     }
     telescope.start = function(root){
-        window.onresize = () => telescope.telescope(root);
+        window.onfocus = () => telescope.telescope(root);
+        window.onblur = () => telescope.telescope(root);
         root.onclick = () => telescope.telescope(root);
         telescope.telescope(root);
     }
