@@ -10,7 +10,6 @@
  * - a function in the framework that must be run after the main react render.
 ****************************************/
 import r from 'react';
-import './Rectangles.css'
 var React = window.React;
 if (r) React = r;
 

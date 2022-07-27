@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {pass,R,C,T,startRectangles} from 'rectangles-npm'
+import 'rectangles-npm/src/Rectangles.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
