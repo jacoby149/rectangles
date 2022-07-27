@@ -1,3 +1,5 @@
 
 demos/plainpad/package-lock.json
 demos/rpc/package-lock.json
+node_modules
+dist
