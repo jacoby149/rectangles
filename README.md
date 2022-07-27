@@ -28,19 +28,7 @@ The Rectangles framework aims to decrease the number of ways to make the same la
 
 ## Ingredients :
 
-Rectangles projects use Babel in browser transpiled react, so npm is not a requirement.
-
-<br>
-
-## Web Hosting Advice (Deployment):
-
-React requires CORS. You can't just click *index.html* and view it locally to see the demo.
-
-You need to host the site via http:// or https://. 
-
-GitHub Pages can host Rectangles projects.
-
-DNS proxying can prevent Rectangles apps from working, I've had some prior trouble with Cloud Flare
+Rectangles provides the ingredients to run apps as Babel in browser transpiled react, so npm is not a requirement.
 
 <br>
 
@@ -48,11 +36,12 @@ DNS proxying can prevent Rectangles apps from working, I've had some prior troub
 
 If you are new to web development, I recommend installing python. 
 
-To get started, download either of the Rectangles Demo Projects to your computer.
+To get started, navigate to the "plainpad_browser_transpile" demo
 
-Open a terminal, navigate to the project folder, and run this command to host locally via http:// :
+Run the static webserver server built inside of python to host locally via http:// :
 
-```
+```bash
+cd demos/plainpad_browser_transpile
 python -m http.server
 ```
 
