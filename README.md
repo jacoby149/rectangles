@@ -2,7 +2,7 @@
 
 
 
-## Demo 1 :  <a href="/demos/RPC_browser_transpile">https://jacobhoffman.tk/rectangles/demos/RPC_browser_transpile</a>
+## Demo 1 :  <a href="rectangles/demos/RPC_browser_transpile">https://jacobhoffman.tk/rectangles/demos/RPC_browser_transpile</a>
 
 Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">https://www.github.com/jacoby149/rock_paper_scissors</a>
 
@@ -12,7 +12,7 @@ Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">htt
 
 
 
-## Demo 2 :  <a href="/demos/plainpad_browser_transpile">https://jacobhoffman.tk/demos/plainpad_browser_transpile</a>
+## Demo 2 :  <a href="rectangles/demos/plainpad_browser_transpile">https://jacobhoffman.tk/rectangles/demos/plainpad_browser_transpile</a>
 
 Source Code : <a href="https://www.github.com/jacoby149/rectangles_demo">https://www.github.com/jacoby149/rectangles_demo</a>
 
