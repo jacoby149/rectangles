@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Plainpad from './components/plainpad'
+import Dash from './components/dash'
+import Crm from './components/crm'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/* Top Pane Site Branding Component */
+function App(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.get("demo") == "dash") return <Dash/>
+    if (urlParams.get("demo") == "crm") return <Crm/>
+    else return <Plainpad/>
 }
 
 export default App;
