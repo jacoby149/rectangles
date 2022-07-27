@@ -4,8 +4,6 @@
 
 ## Demo 1 :  <a href="rectangles/demos/RPC_browser_transpile">https://jacobhoffman.tk/rectangles/demos/RPC_browser_transpile</a>
 
-Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">https://www.github.com/jacoby149/rock_paper_scissors</a>
-
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
 
 <br>
@@ -13,8 +11,6 @@ Source Code : <a href="https://www.github.com/jacoby149/rock_paper_scissors">htt
 
 
 ## Demo 2 :  <a href="rectangles/demos/plainpad_browser_transpile">https://jacobhoffman.tk/rectangles/demos/plainpad_browser_transpile</a>
-
-Source Code : <a href="https://www.github.com/jacoby149/rectangles_demo">https://www.github.com/jacoby149/rectangles_demo</a>
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
 
