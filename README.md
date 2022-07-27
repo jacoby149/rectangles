@@ -2,21 +2,35 @@
 
 
 
-## Demo 1 :  <a href="rectangles/demos/rpc_browser_transpile">https://jacobhoffman.tk/rectangles/demos/rpc_browser_transpile</a>
+## Node Package
 
-(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
+**rectangles-npm** : https://www.npmjs.com/package/rectangles-npm
+
+
+
+## Demo 1 :
+
+### <a href="rectangles/demos/rpc_browser_transpile">https://jacobhoffman.tk/rectangles/demos/rpc_browser_transpile</a>
+
+(The following demo is inpired by the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
 <br>
 
+## Demo 2 :  
 
+### <a href="rectangles/demos/plainpad_browser_transpile">https://jacobhoffman.tk/rectangles/demos/plainpad_browser_transpile</a>
 
-## Demo 2 :  <a href="rectangles/demos/plainpad_browser_transpile">https://jacobhoffman.tk/rectangles/demos/plainpad_browser_transpile</a>
-
-(The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
+(The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
 <br>
 
+## Demo 3 :  
 
+### <a href="rectangles/demos/plainpad">https://jacobhoffman.tk/rectangles/demos/plainpad</a>
+
+(The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
+
+<br>
 
 ## Summary :
 
@@ -32,7 +46,7 @@ Rectangles provides the ingredients to run apps as Babel in browser transpiled r
 
 <br>
 
-## Local Hosting Advice For New Web Developers :
+## Local Hosting Advice For New Developers :
 
 If you are new to web development, I recommend installing python. 
 
