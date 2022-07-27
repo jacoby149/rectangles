@@ -163,8 +163,8 @@ function initTelescope() {
 
   // recursively adjust the webpage based on window size change
   telescope.telescope = function (div) {
-    const children = [...div.childNodes].filter((e) =>
-      e.classList.contains("R")
+    const children = [...Array.from(div.childNodes)].filter((e) =>{
+      return e.classList.contains("R")}
     );
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
