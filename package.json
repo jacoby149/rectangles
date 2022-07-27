@@ -1,6 +1,6 @@
 {
   "name": "rectangles-npm",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a react based front end design system that enforces glitch-free responsive apps.",
   "author": "jacoby149",
   "license": "MIT",
