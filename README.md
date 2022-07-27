@@ -2,7 +2,7 @@
 
 
 
-## Demo 1 :  <a href="rectangles/demos/RPC_browser_transpile">https://jacobhoffman.tk/rectangles/demos/RPC_browser_transpile</a>
+## Demo 1 :  <a href="rectangles/demos/rpc_browser_transpile">https://jacobhoffman.tk/rectangles/demos/rpc_browser_transpile</a>
 
 (The following demo is a copy of the front end UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project. All the code is in *App.js*) 
 
