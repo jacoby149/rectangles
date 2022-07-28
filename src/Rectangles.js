@@ -143,20 +143,20 @@ function pass(props) {
 
 function initTelescope() {
   const telescope = {};
-  telescope.adjust = function (tel, sibs, floatSide, hb, vb) {
+  telescope.adjust = function (tel, sibs, floatSide) {
     const telescopicElement = tel[0];
     if (floatSide == "left" || floatSide == "right") {
       var remainingWidth = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetWidth,
         0
       );
-      telescopicElement.style.width = `calc(100% - ${remainingWidth + 20*hb}px)`;
+      telescopicElement.style.width = `calc(100% - ${remainingWidth}px)`;
     } else if (floatSide == "top" || floatSide == "bottom") {
       var remainingHeight = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetHeight,
         0
       );
-      telescopicElement.style.height = `calc(100% - ${remainingHeight + 20*vb}px)`;
+      telescopicElement.style.height = `calc(100% - ${remainingHeight}px)`;
     } else
       console.error("telescope.js side error, neither horizontal or vertical");
   };
@@ -169,9 +169,7 @@ function initTelescope() {
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
     const floatSide = div.getAttribute("childfloat"); 
-    const hb = (div.classList.contains("br") ? 1 : 0) + (div.classList.contains("bl") ? 1 : 0);
-    const vb = (div.classList.contains("bt") ? 1 : 0) + (div.classList.contains("bb") ? 1 : 0);
-    if (tel.length == 1) telescope.adjust(tel, sibs, floatSide, hb, vb);
+    if (tel.length == 1) telescope.adjust(tel, sibs, floatSide);
     else if (tel.length > 1)
       console.error("Warning. too many telescopic rects.");
 
