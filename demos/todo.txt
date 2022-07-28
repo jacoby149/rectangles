@@ -1,0 +1,3 @@
+update the readme to explain IDing the main component "root"
+for rectangles.css
+add PWA functionality to all of the demos
