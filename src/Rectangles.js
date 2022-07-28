@@ -33,7 +33,7 @@ function C(props) {
   return (
     <R {...pass(props)}>
       <R ns={props.ns} tel t h={props.h}>
-        <div {...pass(props)} style={{ display: "flex", flexWrap: "wrap", height: "100%" }}>
+        <div {...pass(props)} style={{ display: "flex", height: "100%" }}>
           <div style={{ display: "flex", alignItems: va, width: "100%", justifyContent: ha, padding: p }}>
             {props.children}
           </div>
@@ -112,8 +112,9 @@ function R(props) {
   const ismsc = props.msc ? "msc " : "";
   const root = props.root ? "root " : "";
   const theme = props.theme + " ";
+  const borders = (bb?"bb ":"") +(bt?"bt ":"") +(bl?"bl ":"") +(br?"br ":"");
 
-  const className = "R " + root + theme + isTel + isHover + ismc + ismsc + props.className;
+  const className = "R " + root + theme + isTel + isHover + ismc + ismsc + borders + props.className;
   return (
     <div childfloat={side}
       className={className}
@@ -149,13 +150,13 @@ function initTelescope() {
         (accumulator, child) => accumulator + child.offsetWidth,
         0
       );
-      telescopicElement.style.width = `calc(100% - ${remainingWidth + hb}px)`;
+      telescopicElement.style.width = `calc(100% - ${remainingWidth + 20*hb}px)`;
     } else if (floatSide == "top" || floatSide == "bottom") {
       var remainingHeight = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetHeight,
         0
       );
-      telescopicElement.style.height = `calc(100% - ${remainingHeight + vb}px)`;
+      telescopicElement.style.height = `calc(100% - ${remainingHeight + 20*vb}px)`;
     } else
       console.error("telescope.js side error, neither horizontal or vertical");
   };
@@ -167,9 +168,9 @@ function initTelescope() {
     );
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
-    const floatSide = div.getAttribute("childfloat");
-    const hb = (div.hasAttribute("br") ? 1 : 0) + (div.hasAttribute("bl") ? 1 : 0);
-    const vb = (div.hasAttribute("bt") ? 1 : 0) + (div.hasAttribute("bb") ? 1 : 0);
+    const floatSide = div.getAttribute("childfloat"); 
+    const hb = (div.classList.contains("br") ? 1 : 0) + (div.classList.contains("bl") ? 1 : 0);
+    const vb = (div.classList.contains("bt") ? 1 : 0) + (div.classList.contains("bb") ? 1 : 0);
     if (tel.length == 1) telescope.adjust(tel, sibs, floatSide, hb, vb);
     else if (tel.length > 1)
       console.error("Warning. too many telescopic rects.");
