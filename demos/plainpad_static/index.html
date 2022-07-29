@@ -4,6 +4,8 @@
         <!-- Smartphone Friendly Width-->
         <meta name="viewport" content="width=device-width">
         <link rel="manifest" href="pwa/manifest.json">
+
+
         <!-- CSS Styles. Feel free to customize css. -->
         <link rel="stylesheet" href="https://unpkg.com/rectangles-npm@1.0.6/src/Rectangles.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -43,10 +45,10 @@
         
         <!-- Non-React JS -->
         <script src='https://unpkg.com/rectangles-npm@1.0.6/src/loadComp.js'></script>
+        <script src='pwa/registerWorker.js'></script>
+
 
         <!-- Put JS for your custom components here! -->
-        <script src="pwa/registerWorker.js"></script>
-
         <script>
             /* Load Rectangles */
             loadComp('https://unpkg.com/rectangles-npm@1.0.6/src/Rectangles.js');
