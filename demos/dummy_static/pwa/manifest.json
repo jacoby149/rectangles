@@ -19,6 +19,10 @@
             "sizes": "180x180"
         }
     ],
+    "related_applications": [{
+        "platform": "webapp",
+        "url": "https://jacobhoffman.tk/rectangles/demos/dummy_static/pwa/manifest.json"
+      }],
     "start_url": "https://jacobhoffman.tk/rectangles/demos/dummy_static/",
     "background_color": "#000000",
     "display": "standalone",
