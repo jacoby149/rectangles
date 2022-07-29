@@ -10,7 +10,7 @@
 
 ## Demo 1 :
 
-### <a href="rectangles/demos/rpc_browser_transpile">https://jacobhoffman.tk/rectangles/demos/rpc_browser_transpile</a>
+### <a href="rectangles/demos/rpc_static">https://jacobhoffman.tk/rectangles/demos/rpc_static</a>
 
 (The following demo is inpired by the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
@@ -18,7 +18,7 @@
 
 ## Demo 2 :  
 
-### <a href="rectangles/demos/plainpad_browser_transpile">https://jacobhoffman.tk/rectangles/demos/plainpad_browser_transpile</a>
+### <a href="rectangles/demos/plainpad_static">https://jacobhoffman.tk/rectangles/demos/plainpad_static</a>
 
 (The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
@@ -26,7 +26,7 @@
 
 ## Demo 3 :  
 
-### <a href="rectangles/demos/plainpad">https://jacobhoffman.tk/rectangles/demos/plainpad</a>
+### <a href="rectangles/demos/plainpad_npm">https://jacobhoffman.tk/rectangles/demos/plainpad_npm</a>
 
 (The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
@@ -34,9 +34,11 @@
 
 ## Summary :
 
-Rectangles is a front end design system that enforces *glitch-free*, *responsive* apps.
+Rectangles is a system for designing responsive layouts for front ends. it enforces *glitch-free*, *responsive* apps.
 
-The Rectangles framework aims to decrease the number of ways to make the same layout in different ways by enforcing strict rules which rectangles objects follow.
+The Rectangles framework aims to decrease the number of ways to make the same layout in by enforcing strict constraints / design rules. 
+
+For two people to make the same front end layout in rectangles, it is likely that they wrote the same exact code.
 
 <br>
 
@@ -50,7 +52,7 @@ Rectangles provides the ingredients to run apps as Babel in browser transpiled r
 
 If you are new to web development, I recommend installing python. 
 
-To get started, navigate to the "plainpad_browser_transpile" demo
+To get started, navigate to the "plainpad_static" demo
 
 Run the static webserver server built inside of python to host locally via http:// :
 
@@ -63,26 +65,110 @@ Then, go to localhost:8000 in your browser to view the project.
 
 Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
-<br>
 
-## Overview (The Rectangles Standard In 13 Steps) : 
 
-1. Rectangles projects are written entirely within a React component called App.
-2. All rectangles projects have an index.html. In the body there is an App component rendered into it.
-3. All react components are loaded in at the bottom of the index.html file with the loadComp function.
-4. App is comprised of rectangles.
-5. The main rectangle (root rectangle) is a viewport sized Rectangle with className = "root".
-6. The root rectangle is the only rectangle that has no free dimensions.
-7. All non root rectangles have 1 free dimension that can be resized with the s={size} attribute.
-8. All rectangles have a child float attribute that controls where children rectangles float. (t, l, b,or r)
-9. If a rectangle has a parent with the t or b attribute, its width is the free dimension.
-10. If a rectangle has a parent with the l or r attribute, its height is the free dimension.
-11. Rectangles are defaulted with the t attribute if they don't have t, l, b or r.
-12. Amongst sibling rectangles, one of them is allowed to be telescopic.
-13. Telescopic rectangles automatically size themselves so that the sum of all sibling rectangles' free dimension sizes equals their parent's corresponding dimension.
-14. Rectangles have a variety of formatting attributes , and also have sub classes (see below).
+## Static Rectangles vs. npm built Rectangles 
 
-<br>
+**npm built (via. npx create-react-app) [demos/plainpad-npm]** : 
+
+1. JSX components are imported the standard way as is done in a react project.
+2. Run startRectangles on the 
+
+*VS.*
+
+**static [demos/plainpad-static]** : 
+
+1. Rectangles.css is attached to the index.html file as a link tag.
+2. loadComp.js is attached to the index.html as a script tag. 
+3. JSX components are loaded in at the bottom of the index.html file with the loadComp function.
+
+ 
+
+## Explaining Rectangles
+
+#### The root rectangle
+
+The main rectangle (root rectangle) is a viewport sized Rectangle with the root attribute. There should be only one root rectangle, The root rectangle is the only rectangle that has no free dimensions.
+
+#### relationships of rectangles
+
+rectangles can have 1 parent [meaning they are the child of that parent] 
+
+rectangles can have multiple siblings.
+
+rectangles can have at most one telescopic sibling.
+
+
+
+## Example [dummy demo]
+
+```jsx
+<R bb bt bl br root t theme={"dark"}>
+    {/*root*/}
+    <R bb l s={"70px"} theme={"brick"}>
+        {/* A */}
+        <R br s={"40px"}>
+            <b> B </b>
+        </R>
+        <R br tel>
+            <b> C </b>
+        </R> 
+        <R s={"60px"}>
+            <b> D </b>
+        </R>
+    </R>
+    <R>
+        <b> E </b>
+    </R> 
+</R>
+```
+
+##### root
+
+* In the above example, A and E are children of the root rectangle. 
+
+* A and E are siblings.
+
+##### A
+
+* in the above example, B, C, and D are children of A.
+
+* B, C, and D are siblings.
+
+* C is a telescopic sibling.
+
+#### **parent rectangle influence on children**
+
+1. child rectangles automatically **inherits the theme** of the parent rectangle.
+2. child rectangles float in the direction of their parent's float attribute {t,l,b or r}
+3. children inherit the size of the parent rectangles locking dimension.
+4. if the float is **t** or **b**, the locking dimension is **width**
+5. if the float is **l** or **r**, the locking dimension is **height**
+6. the telescopic sibling fills the space in the free dimension that its other siblings fail to occupy.
+
+##### root
+
+* in the above example root has a float of **t**, which means its locking dimension is **width**.
+
+* A and E inherit width from the root rectangle, and **float to the top**.
+
+* A and E inherit the **dark** theme from root.
+
+##### A
+
+* in the above example A has a float of **l**, which means its locking dimension is **height**.
+* in the above example B, C and D inherit the height of A which is {"70px"}
+* B, C, and D inherit the **dark** theme from A.
+
+##### C
+
+* C is the telescopic sibling of B and D.
+
+* since the locking dimension is height, the free dimension is width
+
+* C stretches to fills the width of parent A that B and D fail to occupy
+
+  
 
 ## Attributes special to the Rectangle(R) Component. 
 
@@ -107,17 +193,16 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 | **tel**                | Telescopic rectangles accommodate siblings to meet the full size of the parent. |
 | **theme** = {cssClass} | A css class assigned to the given rectangle and inherited by all children. |
 
-<br>
+
 
 ## Built-In Components
 
-| Component       | Uses                                                         |
-| --------------- | ------------------------------------------------------------ |
-| **Content(C)**  | Rectangle sub class with easy to position internal content.  |
-| **Input(T)**    | Content sub class that is a Minimalist text entry field.     |
-| **Dataview(D)** | Content sub class that is a collapsible searchable sortable data table + data labels. Data entries can be viewed in Card format with search and sort functionality. |
+| Component      | Uses                                                        |
+| -------------- | ----------------------------------------------------------- |
+| **Content(C)** | Rectangle sub class with easy to position internal content. |
+| **Input(T)**   | Content sub class that is a Minimalist text entry field.    |
 
-| Content (C) Attribute             | Effect                                     |
+| Content (C) Attributes            | Effect                                     |
 | --------------------------------- | ------------------------------------------ |
 | **ha** = {Left,Center,or Right}   | Horizontal Alignment in content rectangle. |
 | **va** = {Top, Bottom, or Center} | Vertical alignment of content in rectangle |

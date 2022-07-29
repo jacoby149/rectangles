@@ -33,7 +33,7 @@ function C(props) {
   return (
     <R {...pass(props)}>
       <R ns={props.ns} tel t h={props.h}>
-        <div {...pass(props)} style={{ display: "flex", flexWrap: "wrap", height: "100%" }}>
+        <div {...pass(props)} style={{ display: "flex", height: "100%" }}>
           <div style={{ display: "flex", alignItems: va, width: "100%", justifyContent: ha, padding: p }}>
             {props.children}
           </div>
@@ -95,7 +95,7 @@ function R(props) {
       return React.cloneElement(child, {
         //this properties are available as a props in child components
         ps: side,
-        theme: props.theme
+        theme: child.props.theme?child.props.theme : props.theme
       });
     }
   );
@@ -112,8 +112,9 @@ function R(props) {
   const ismsc = props.msc ? "msc " : "";
   const root = props.root ? "root " : "";
   const theme = props.theme + " ";
+  const borders = (bb?"bb ":"") +(bt?"bt ":"") +(bl?"bl ":"") +(br?"br ":"");
 
-  const className = "R " + root + theme + isTel + isHover + ismc + ismsc + props.className;
+  const className = "R " + root + theme + isTel + isHover + ismc + ismsc + borders + props.className;
   return (
     <div childfloat={side}
       className={className}
@@ -142,20 +143,20 @@ function pass(props) {
 
 function initTelescope() {
   const telescope = {};
-  telescope.adjust = function (tel, sibs, floatSide, hb, vb) {
+  telescope.adjust = function (tel, sibs, floatSide) {
     const telescopicElement = tel[0];
     if (floatSide == "left" || floatSide == "right") {
       var remainingWidth = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetWidth,
         0
       );
-      telescopicElement.style.width = `calc(100% - ${remainingWidth + hb}px)`;
+      telescopicElement.style.width = `calc(100% - ${remainingWidth}px)`;
     } else if (floatSide == "top" || floatSide == "bottom") {
       var remainingHeight = sibs.reduce(
         (accumulator, child) => accumulator + child.offsetHeight,
         0
       );
-      telescopicElement.style.height = `calc(100% - ${remainingHeight + vb}px)`;
+      telescopicElement.style.height = `calc(100% - ${remainingHeight}px)`;
     } else
       console.error("telescope.js side error, neither horizontal or vertical");
   };
@@ -167,10 +168,8 @@ function initTelescope() {
     );
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
-    const floatSide = div.getAttribute("childfloat");
-    const hb = (div.hasAttribute("br") ? 1 : 0) + (div.hasAttribute("bl") ? 1 : 0);
-    const vb = (div.hasAttribute("bt") ? 1 : 0) + (div.hasAttribute("bb") ? 1 : 0);
-    if (tel.length == 1) telescope.adjust(tel, sibs, floatSide, hb, vb);
+    const floatSide = div.getAttribute("childfloat"); 
+    if (tel.length == 1) telescope.adjust(tel, sibs, floatSide);
     else if (tel.length > 1)
       console.error("Warning. too many telescopic rects.");
 

@@ -1,8 +1,8 @@
 
-import {pass,R,C,T,startRectangles} from 'Rectangles.js'
+import {pass,R,C,T} from './rectangles/Rectangles.js'
 
 /* Plain Pad app made of entirely rectangles.js components */
-function App(){
+function Plainpad(){
 
 
     /* Menu Collapsed State */
@@ -39,31 +39,30 @@ function App(){
             </R>  
             
 
-            {/*Everything Under Top Pane */}
+            {/* Bottom Section */}
             <R tel l>
 
 
-                {/* Left Side Pane */}
+                {/* Side Pane */}
                 <R t ns br c={collapse} s= {"240px"}>
                     <R l s = {"50px"}>
                         <C h s={"100px"}>
-                            <h4>User Search : </h4>
+                            <h4>Search Bar : </h4>
                         </C>
                         <T tel ns>Search...</T>    
                     </R>        
                     <R tel bb bt t>
-                        <User>Caleb69</User> 
-                        <User>Ericc</User> 
-                        <User>Jennypenny</User> 
+                        <Note>Note 1 :)</Note> 
+                        <Note>Note 2 :)</Note> 
+                        <Note>Note 3 :)</Note> 
                     </R>
                     <Credits />
                 </R>
 
 
                 {/* Writing Pane */}
-                <R t tel>
-                    <GameButtons></GameButtons>
-                    <SubmitButton></SubmitButton>
+                <R tel t >
+                    <T tel>Write a note here...</T>
                 </R>
 
                 
@@ -79,7 +78,7 @@ function Credits(props){
         <R t {...pass(props)}>
             <C s={"70px"}> 
                 <div style={{fontFamily:"monospace"}}>
-                   Game Made by <a href = "https://jacobhoffman.tk">Jacob Hoffman</a>
+                    <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
                 </div>
             </C>
         </R>
@@ -89,7 +88,7 @@ function Credits(props){
 
 /* A custom sub class of Content(C). (Which makes it a subclass of (R))
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
-function User(props){
+function Note(props){
     return (
         <C h s={"50px"} {...pass(props)}>
             {props.children}
@@ -114,43 +113,16 @@ function Branding(props){
     return(
         <R l {...pass(props)}>
             
-                <C l p = "0 0 0 22" s = {"70px"}>{/* Plain Pad Logo */}
-                    <img src = {"rock.png"} style={{height:"60%"}} />
+                <C l p = "0 0 0 22px" s = {"70px"}>{/* Plain Pad Logo */}
+                    <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%"}} />
                 </C>
                 
                 <C l ns mc s = {"120px"}>
-                    <div style={{fontFamily:"monospace"}}><h3>Rock Paper<br/> Scissors</h3></div>
+                    <div style={{fontFamily:"monospace"}}><h3>Plainpad<br/> Design Copy</h3></div>
                 </C>
 
         </R>
     )
 }
 
-function GameButton(props){
-    return(
-        <C h br ha="center" s = "33.33%" {...pass(props)}>
-            <img width="50px" src={props.img} ></img>
-        </C>
-    )
-}
-
-function GameButtons(props){
-    return(
-        <R l s={"100px"} bb {...pass(props)}>
-            <GameButton img="rock.png"></GameButton>
-            <GameButton img="paper.png"></GameButton>
-            <GameButton img="scissors.png"></GameButton>
-        </R>
-    )
-}
-
-function SubmitButton (props){
-    return (
-        <C s="100px" ha = "center" {...pass(props)}>
-                <button className="button">Submit</button>
-        </C>
-    )
-}
-
-ReactDOM.render(<R><App /></R>,document.getElementById("app"));
-startRectangles(document.getElementById("app"));
+export default Plainpad;
