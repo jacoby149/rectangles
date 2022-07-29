@@ -1,7 +1,6 @@
 {
     "short_name": "rect plainpad",
     "name": "rectangles plainpad",
-    "id":"https://jacobhoffman.tk/rectangles/demos/plainpad_static/",
     "icons": [
         {
             "src": "https://jacobhoffman.tk/rectangles/src/1024x1024_load.png",
@@ -21,9 +20,9 @@
     ],
     "related_applications": [{
         "platform": "webapp",
-        "url": "https://jacobhoffman.tk/rectangles/demos/plainpad_static/pwa/manifest.json"
+        "url": "/rectangles/demos/plainpad_static/pwa/manifest.json"
       }],
-    "start_url": "https://jacobhoffman.tk/rectangles/demos/plainpad_static/",
+    "start_url": "/rectangles/demos/plainpad_static/",
     "background_color": "#000000",
     "display": "standalone",
     "theme_color": "#000000",
