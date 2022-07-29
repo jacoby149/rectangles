@@ -1,5 +1,9 @@
 const staticApp = "dummy"
-const assets = []
+const assets = [
+  'index.html',
+  'index.js',
+  'plainpad.js'
+]
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
