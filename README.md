@@ -10,7 +10,7 @@
 
 ## Demo 1 :
 
-### <a href="rectangles/demos/rpc_static">https://jacobhoffman.tk/rectangles/demos/rpc_static</a>
+### https://jacobhoffman.tk/rectangles/demos/rpc_static
 
 (The following demo is inpired by the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
@@ -18,7 +18,7 @@
 
 ## Demo 2 :  
 
-### <a href="rectangles/demos/plainpad_static">https://jacobhoffman.tk/rectangles/demos/plainpad_static</a>
+### https://jacobhoffman.tk/rectangles/demos/plainpad_static
 
 (The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
@@ -26,7 +26,7 @@
 
 ## Demo 3 :  
 
-### <a href="rectangles/demos/plainpad_npm">https://jacobhoffman.tk/rectangles/demos/plainpad_npm</a>
+### https://jacobhoffman.tk/rectangles/demos/plainpad_npm
 
 (The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
 
