@@ -4,9 +4,19 @@
     "id":"https://jacobhoffman.tk/rectangles/demos/plainpad_static/",
     "icons": [
         {
-            "src": "https://jacobhoffman.tk/rectangles/demos/plainpad_static/pwa/512x512_load.png",
+            "src": "https://jacobhoffman.tk/rectangles/src/1024x1024_load.png",
+            "type": "image/png",
+            "sizes": "1024x1024"
+        },
+        {
+            "src": "https://jacobhoffman.tk/rectangles/src/512x512_load.png",
             "type": "image/png",
             "sizes": "512x512"
+        },
+        {
+            "src": "https://jacobhoffman.tk/rectangles/src/180x180_load.png",
+            "type": "image/png",
+            "sizes": "180x180"
         }
     ],
     "related_applications": [{
