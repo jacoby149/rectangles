@@ -152,5 +152,5 @@ function SubmitButton (props){
     )
 }
 
-ReactDOM.render(<R><App /></R>,document.getElementById("app"));
-startRectangles(document.getElementById("app"));
+ReactDOM.render(<R><App /></R>,document.getElementById("root"));
+startRectangles(document.getElementById("root"));
