@@ -102,6 +102,8 @@ rectangles can have at most one telescopic sibling.
 
 ## Example [dummy demo]
 
+https://jacobhoffman.tk/rectangles/demos/dummy_static
+
 ```jsx
 <R bb bt bl br root t theme={"dark"}>
     {/*root*/}
