@@ -1,9 +1,5 @@
 const staticApp = "dummy"
-const assets = [
-  'https://jacobhoffman.tk/rectangles/demos/plainpad_static/index.html',
-  'https://jacobhoffman.tk/rectangles/demos/plainpad_static/index.js',
-  'https://jacobhoffman.tk/rectangles/demos/plainpad_static/plainpad.js',
-]
+const assets = []
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
