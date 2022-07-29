@@ -1,4 +1,4 @@
-const staticApp = "dummy"
+const staticApp = "rectangles plainpad"
 const assets = []
 
 self.addEventListener("install", installEvent => {
