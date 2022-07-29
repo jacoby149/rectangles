@@ -20,7 +20,7 @@
     ],
     "related_applications": [{
         "platform": "webapp",
-        "url": "./pwa/manifest.json"
+        "url": "./rectangles/demos/plainpad_static/"
       }],
     "start_url": "./",
     "background_color": "#000000",
