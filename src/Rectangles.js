@@ -95,7 +95,7 @@ function R(props) {
       return React.cloneElement(child, {
         //this properties are available as a props in child components
         ps: side,
-        theme: props.theme
+        theme: child.props.theme?child.props.theme : props.theme
       });
     }
   );

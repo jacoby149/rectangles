@@ -5,13 +5,23 @@ import { pass, R, C, T, startRectangles } from 'Rectangles.js'
 function App() {
     /* The App Component */
     return (
-        <R root t theme={"dark"}> //root
-            <R l s={"70px"}> //A
-                <R s={"40px"}></R> //B
-                <R tel></R> //C
-                <R s={"60px"}></R> //D
+        <R bb bt bl br root t theme={"dark"}>
+            {/*root*/}
+            <R bb l s={"70px"} theme={"brick"}>
+                {/* A */}
+                <R br s={"40px"}>
+                <b> B </b>
+                </R>
+                <R br tel>
+                <b> C </b>
+                </R> 
+                <R s={"60px"}>
+                <b> D </b>
+                </R>
             </R>
-            <R></R> //E
+            <R>
+            <b> E </b>
+            </R> 
         </R>
     )
 }

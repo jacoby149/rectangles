@@ -103,13 +103,23 @@ rectangles can have at most one telescopic sibling.
 ## Example [dummy demo]
 
 ```jsx
-<R root t theme={"dark"}> //root
-    <R l s={"70px"}> //A
-    	<R s={"40px"}></R> //B
-    	<R tel></R> //C
-    	<R s={"60px"}></R> //D
-	</R> 
-    <R></R> //E
+<R bb bt bl br root t theme={"dark"}>
+    {/*root*/}
+    <R bb l s={"70px"} theme={"brick"}>
+        {/* A */}
+        <R br s={"40px"}>
+            <b> B </b>
+        </R>
+        <R br tel>
+            <b> C </b>
+        </R> 
+        <R s={"60px"}>
+            <b> D </b>
+        </R>
+    </R>
+    <R>
+        <b> E </b>
+    </R> 
 </R>
 ```
 
