@@ -1,7 +1,7 @@
 {
     "short_name": "dummy",
     "name": "dummy",
-    "id":"/demos/dummy_static/",
+    "id":"https://jacobhoffman.tk/rectangles/demos/dummy_static/",
     "icons": [
         {
             "src": "https://jacobhoffman.tk/rectangles/src/load.png",
@@ -9,10 +9,9 @@
             "sizes": "938x938"
         }
     ],
-    "start_url": "/demos/dummy_static/",
+    "start_url": "https://jacobhoffman.tk/rectangles/demos/dummy_static/",
     "background_color": "#000000",
     "display": "standalone",
-    "scope": "/demos/dummy_static/",
     "theme_color": "#000000",
     "description": "rectangles dummy example"
 }

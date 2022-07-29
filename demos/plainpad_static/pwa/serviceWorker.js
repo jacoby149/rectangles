@@ -1,10 +1,7 @@
-const staticApp = "plainpad_static"
+const staticApp = "dummy"
 const assets = [
   "index.html",
   "index.js",
-  "plainpad.js",
-  "crm.js",
-  "dash.js"
 ]
 
 self.addEventListener("install", installEvent => {

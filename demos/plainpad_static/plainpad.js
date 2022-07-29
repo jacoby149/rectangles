@@ -4,7 +4,6 @@ import {pass,R,C,T} from './rectangles/Rectangles.js'
 /* Plain Pad app made of entirely rectangles.js components */
 function Plainpad(){
 
-
     /* Menu Collapsed State */
     const [collapse,setCollapse] = React.useState(false);
     function toggleCollapse(){

@@ -3,7 +3,7 @@
     <head>
         <!-- Smartphone Friendly Width-->
         <meta name="viewport" content="width=device-width">
-        <link rel="manifest" href="manifest.json">
+        <link rel="manifest" href="pwa/manifest.json">
 
 
         <!-- CSS Styles. Feel free to customize css. -->
@@ -45,7 +45,7 @@
         
         <!-- Non-React JS -->
         <script src='https://unpkg.com/rectangles-npm@1.0.6/src/loadComp.js'></script>
-        <script src='registerWorker.js'></script>
+        <script src='pwa/registerWorker.js'></script>
 
 
         <!-- Put JS for your custom components here! -->
@@ -54,8 +54,6 @@
             loadComp('https://unpkg.com/rectangles-npm@1.0.6/src/Rectangles.js');
             /* Load Your Components */
             loadComp('plainpad.js');
-            loadComp('dash.js')
-            loadComp('crm.js')
             loadComp('index.js');
         </script>
 
