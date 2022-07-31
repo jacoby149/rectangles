@@ -72,7 +72,6 @@ Use (Ctrl + Shift + R) to refresh the browser on code changes.
 **npm built (via. npx create-react-app) [demos/plainpad-npm]** : 
 
 1. JSX components are imported the standard way as is done in a react project.
-2. Run startRectangles on the 
 
 *VS.*
 
@@ -105,24 +104,32 @@ rectangles can have at most one telescopic sibling.
 https://jacobhoffman.tk/rectangles/demos/dummy_static
 
 ```jsx
-<R bb bt bl br root t theme={"dark"}>
-    {/*root*/}
-    <R bb l s={"70px"} theme={"brick"}>
-        {/* A */}
-        <R br s={"40px"}>
-            <b> B </b>
+/* index.js */
+import { pass, R, C, T, startRectangles } from 'Rectangles.js'
+function App() {
+    return (
+        <R bb bt bl br root t theme={"dark"}>
+            {/*root*/}
+            <R bb l s={"70px"} theme={"brick"}>
+                {/* A */}
+                <R br s={"40px"}>
+                <b> B </b>
+                </R>
+                <R br tel>
+                <b> C </b>
+                </R> 
+                <R s={"60px"}>
+                <b> D </b>
+                </R>
+            </R>
+            <R>
+            <b> E </b>
+            </R> 
         </R>
-        <R br tel>
-            <b> C </b>
-        </R> 
-        <R s={"60px"}>
-            <b> D </b>
-        </R>
-    </R>
-    <R>
-        <b> E </b>
-    </R> 
-</R>
+    )
+}
+ReactDOM.render(<R><App /></R>, document.getElementById("root"));
+startRectangles(document.getElementById("root")); // rectangles must be started after the render!
 ```
 
 ##### root

@@ -1,9 +1,5 @@
-
 import { pass, R, C, T, startRectangles } from 'Rectangles.js'
-
-/* Plain Pad app made of entirely rectangles.js components */
 function App() {
-    /* The App Component */
     return (
         <R bb bt bl br root t theme={"dark"}>
             {/*root*/}
@@ -25,6 +21,5 @@ function App() {
         </R>
     )
 }
-
 ReactDOM.render(<R><App /></R>, document.getElementById("root"));
 startRectangles(document.getElementById("root"));
