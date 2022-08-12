@@ -172,12 +172,81 @@ startRectangles(document.getElementById("root")); // rectangles must be started 
 ##### C
 
 * C is the telescopic sibling of B and D.
-
 * since the locking dimension is height, the free dimension is width
-
 * C stretches to fills the width of parent A that B and D fail to occupy
 
-  
+
+
+
+## The ...pass(props) Pattern.
+
+```jsx
+//The Credits Component is used in another rectangles component.
+//You want it to inherit the themes and locked dimensions in its interior rectangles.
+.....
+   <Credits/>
+    </R>
+</R>
+}
+
+/* Custom Rectangles Based Component. */
+function Credits(props){
+    return(
+        <R t {...pass(props)}>
+            <C s={"70px"}> 
+                <div style={{fontFamily:"monospace"}}>
+                    <a href = "https://alextselegidis.com/...">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
+                </div>
+            </C>
+        </R>
+    )
+}
+```
+
+**Rectangles Inheritance** 
+
+1. Routinely, developers will want to make custom rectangles components.
+2. These components need to be able to pass through inheritance of : 
+   * Themes
+   * Locked Dimensions
+3. Developers must pass inheritance manually through the ...pass(props) pattern.
+4. A single break in the nesting without the ...pass(props) pattern breaks the inheritance.
+
+
+
+## Things You Shouldn't Do 
+
+```jsx
+// Do NOT do this...
+<R>
+	<div></div> //sibling 1
+	<R> </R> //sibling 2
+</R>
+```
+
+Rectangles based components should NOT be siblings with regular components.
+
+
+
+## Good Work Around
+
+```jsx
+// This is a good work around.
+<R>
+	<R> //sibling 1
+		<div></div> //only child
+    </R>
+    <R> </R> //sibling 2
+</R>
+```
+
+Here, the problem is solved by encapsulating the div element in a R component.
+
+1. the div is made an only child.
+2. Rectangles based components are siblings with each other. 
+3. There are no Rectangles based components that are siblings with regular components.
+
+
 
 ## Attributes special to the Rectangle(R) Component. 
 
