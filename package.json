@@ -1,6 +1,6 @@
 {
   "name": "rectangles-npm",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "a react based front end design system that enforces glitch-free responsive apps.",
   "author": "jacoby149",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": ">=16.0.0"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.10",
