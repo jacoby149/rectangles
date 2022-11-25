@@ -1,5 +1,5 @@
 
-import {pass,R,C,T} from './rectangles/Rectangles.js'
+import {R,C,T} from './rectangles/Rectangles.js'
 
 /* Plain Pad app made of entirely rectangles.js components */
 function Plainpad(){
@@ -74,7 +74,7 @@ function Plainpad(){
 /* The credit/link to the original Plain Pad project */
 function Credits(props){
     return(
-        <R t {...pass(props)}>
+        <R t rna={props.rna}>
             <C s={"70px"}> 
                 <div style={{fontFamily:"monospace"}}>
                     <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
@@ -89,7 +89,7 @@ function Credits(props){
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
 function Note(props){
     return (
-        <C h s={"50px"} {...pass(props)}>
+        <C h s={"50px"} rna={props.rna}>
             {props.children}
         </C>
     )
@@ -100,7 +100,7 @@ function Note(props){
 function Icon(props){
     const iconClass = "fa-"+props.children;
     return(
-        <C s={"50px"} {...pass(props)}>
+        <C s={"50px"} rna={props.rna}>
             <i className={"fa "+ iconClass +" fa-2x font-weight-bold"}></i>
         </C>
     )
@@ -110,7 +110,7 @@ function Icon(props){
 /* Top Pane Site Branding Component */
 function Branding(props){
     return(
-        <R l {...pass(props)}>
+        <R l rna={props.rna}>
             
                 <C l p = "0 0 0 22px" s = {"70px"}>{/* Plain Pad Logo */}
                     <img src = {"https://alextselegidis.com/try/plainpad-standalone/static/media/logo.af1c98b2.svg"} style={{height:"60%"}} />

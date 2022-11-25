@@ -1,5 +1,5 @@
 
-import {pass,R,C,T,startRectangles} from 'Rectangles.js'
+import {R,C,T,startRectangles} from 'Rectangles.js'
 
 /* Plain Pad app made of entirely rectangles.js components */
 function App(){
@@ -76,7 +76,7 @@ function App(){
 /* The credit/link to the original Plain Pad project */
 function Credits(props){
     return(
-        <R t {...pass(props)}>
+        <R t rna={props.rna}>
             <C s={"70px"}> 
                 <div style={{fontFamily:"monospace"}}>
                    Game Made by <a href = "https://jacobhoffman.tk">Jacob Hoffman</a>
@@ -91,7 +91,7 @@ function Credits(props){
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
 function User(props){
     return (
-        <C h s={"50px"} {...pass(props)}>
+        <C h s={"50px"} rna={props.rna}>
             {props.children}
         </C>
     )
@@ -102,7 +102,7 @@ function User(props){
 function Icon(props){
     const iconClass = "fa-"+props.children;
     return(
-        <C s={"50px"} {...pass(props)}>
+        <C s={"50px"} rna={props.rna}>
             <i className={"fa "+ iconClass +" fa-2x font-weight-bold"}></i>
         </C>
     )
@@ -112,7 +112,7 @@ function Icon(props){
 /* Top Pane Site Branding Component */
 function Branding(props){
     return(
-        <R l {...pass(props)}>
+        <R l rna={props.rna}>
             
                 <C l p = "0 0 0 22" s = {"70px"}>{/* Plain Pad Logo */}
                     <img src = {"rock.png"} style={{height:"60%"}} />
@@ -128,7 +128,7 @@ function Branding(props){
 
 function GameButton(props){
     return(
-        <C h br ha="center" s = "33.33%" {...pass(props)}>
+        <C h br ha="center" s = "33.33%" rna={props.rna}>
             <img width="50px" src={props.img} ></img>
         </C>
     )
@@ -136,7 +136,7 @@ function GameButton(props){
 
 function GameButtons(props){
     return(
-        <R l s={"100px"} bb {...pass(props)}>
+        <R l s={"100px"} bb rna={props.rna}>
             <GameButton img="rock.png"></GameButton>
             <GameButton img="paper.png"></GameButton>
             <GameButton img="scissors.png"></GameButton>
@@ -146,7 +146,7 @@ function GameButtons(props){
 
 function SubmitButton (props){
     return (
-        <C s="100px" ha = "center" {...pass(props)}>
+        <C s="100px" ha = "center" rna={props.rna}>
                 <button className="button">Submit</button>
         </C>
     )
