@@ -14,40 +14,14 @@ var React = window.React;
 if (r) React = r;
 
 
-/**************
- * React Components
- **************/
 
-function T(props) {
-  return (
-    <C p="0px 15px 0px 15px"{...pass(props)}>
-      <textarea className={"R " + props.theme} style={{ paddingTop: "18px", height: "100%", width: "100%", resize: "none" }} placeholder={props.children}></textarea>
-    </C>
-  )
-}
-
-function C(props) {
-  const ha = props.ha ? props.ha : "left";
-  const va = props.va ? props.va : "center";
-  const p = props.p ? props.p : "0px 0px 0px 15px";
-  return (
-    <R {...pass(props)}>
-      <R ns={props.ns} tel t h={props.h}>
-        <div {...pass(props)} style={{ display: "flex", height: "100%" }}>
-          <div style={{ display: "flex", alignItems: va, width: "100%", justifyContent: ha, padding: p }}>
-            {props.children}
-          </div>
-        </div>
-      </R>
-    </R>
-  )
-}
-
-/* The Rectangle component */
+/********************************* 
+ * The Rectangle React Component 
+ * *******************************/
 function R(props) {
 
   /* concatenate dictionaries */
-  function a(x, y) {
+  function concatDict(x, y) {
     return { ...x, ...y };
   }
 
@@ -63,7 +37,7 @@ function R(props) {
   if (l) { side = "left"; }
   if (r) { side = "right"; }
 
-
+  /* writing mode based on float */
   if (l || r) { style = a(style, { writingMode: "vertical-lr" }); }
   else if (t || b) { style = a(style, { writingMode: "horizontal-tb" }); }
 
@@ -78,13 +52,21 @@ function R(props) {
   if (props.ns) { style = a(style, { overflow: "hidden" }); }
   if (props.h) { style = a(style, {}); }
 
-  /* rect size */
-  const v = (!props.ps || props.ps == "top" || props.ps == "bottom");
+  /* rectangle vertical or horizontally free axis */
+  /* if v is true, rect. is free on the vertical axis. */
+  const v = (!props.rna.parentAxis ||
+    props.rna.parentAxis == "top" ||
+    props.rna.parentAxis == "bottom");
+
+  /* rect size, regular and mobile devices */
   var [s, ms] = [props.s, props.ms];
 
   if (!props.root) {
+    /* if size isn't provided, do auto sizing */
     if (!s) { s = "auto"; }
-    if (v) { style = a(style, { height: s, width: "100%" }); } /* for now */
+
+    /* set the size of the free axis, and lock the other axis */
+    if (v) { style = a(style, { height: s, width: "100%" }); }
     else { style = a(style, { width: s, height: "100%" }); }
   }
 
@@ -93,28 +75,35 @@ function R(props) {
     props.children,
     (child, i) => {
       return React.cloneElement(child, {
-        //this properties are available as a props in child components
-        ps: side,
-        theme: child.props.theme?child.props.theme : props.theme
+
+        /* properties are available in props.rna of child components */
+        rna: {
+          parentAxis: side,
+          theme: props.theme
+        }
       });
     }
   );
 
-  /* if collapsed */
+  /* if collapsed, hide the rectangle */
   if (props.c) {
     style = a(style, { display: "none" });
-  } /* for now */
+  }
 
-
+  /* setting classname controlled vars */
   const isTel = props.tel ? "tel " : "nottel ";
   const isHover = props.h ? "h " : "";
   const ismc = props.mc ? "mc " : "";
   const ismsc = props.msc ? "msc " : "";
   const root = props.root ? "root " : "";
-  const theme = props.theme + " ";
-  const borders = (bb?"bb ":"") +(bt?"bt ":"") +(bl?"bl ":"") +(br?"br ":"");
-
+  const borders = (bb ? "bb " : "") + (bt ? "bt " : "") + (bl ? "bl " : "") + (br ? "br " : "");
+  const theme = props.theme ? `${props.theme} ` :
+    (props.rna && props.rna.theme) ? `${props.rna.theme} ` : ""
+  
+  /* using the above vars to set the classname */
   const className = "R " + root + theme + isTel + isHover + ismc + ismsc + borders + props.className;
+
+  /* the result */
   return (
     <div childfloat={side}
       className={className}
@@ -125,21 +114,38 @@ function R(props) {
   )
 }
 
-
 /*************************
- * functional helpers
+ *  Derivative Components
  *************************/
 
-function pass(props) {
-  const objectMap = (obj, fn) =>
-    Object.fromEntries(
-      Object.entries(obj).map(
-        ([k, v], i) => [k, fn(v, k, i)]
-      )
-    )
-
-  return objectMap(props, v => v === true ? "true" : (v === false ? "false" : v))
+ function T(props) {
+  return (
+    <C p="0px 15px 0px 15px" rna = {props.rna}>
+      <textarea className={"R " + props.theme} style={{ paddingTop: "18px", height: "100%", width: "100%", resize: "none" }} placeholder={props.children}></textarea>
+    </C>
+  )
 }
+
+function C({props}) {
+  const ha = props.ha ? props.ha : "left";
+  const va = props.va ? props.va : "center";
+  const p = props.p ? props.p : "0px 0px 0px 15px";
+  return (
+    <R rna={props.rna}>
+      <R ns={props.ns} tel t h={props.h}>
+        <div {...pass(props)} style={{ display: "flex", height: "100%" }}>
+          <div style={{ display: "flex", alignItems: va, width: "100%", justifyContent: ha, padding: p }}>
+            {props.children}
+          </div>
+        </div>
+      </R>
+    </R>
+  )
+}
+
+/**************************************
+ * Rectangles Telescopic Functionality
+ **************************************/
 
 function initTelescope() {
   const telescope = {};
@@ -163,12 +169,13 @@ function initTelescope() {
 
   // recursively adjust the webpage based on window size change
   telescope.telescope = function (div) {
-    const children = [...Array.from(div.childNodes)].filter((e) =>{
-      return e.classList.contains("R")}
+    const children = [...Array.from(div.childNodes)].filter((e) => {
+      return e.classList.contains("R")
+    }
     );
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
-    const floatSide = div.getAttribute("childfloat"); 
+    const floatSide = div.getAttribute("childfloat");
     if (tel.length == 1) telescope.adjust(tel, sibs, floatSide);
     else if (tel.length > 1)
       console.error("Warning. too many telescopic rects.");
