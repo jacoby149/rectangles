@@ -178,11 +178,11 @@ startRectangles(document.getElementById("root")); // rectangles must be started 
 
 
 
-## The ...pass(props) Pattern.
+## Passing inheritance with rna.
 
 ```jsx
-//The Credits Component is used in another rectangles component.
-//You want it to inherit the themes and locked dimensions in its interior rectangles.
+// Developer made the <Credits/> component, and wants themes + locked dimensions inheritance to pass through.
+// rna={props.rna} passes the inheritance through.
 .....
    <Credits/>
     </R>
@@ -192,7 +192,7 @@ startRectangles(document.getElementById("root")); // rectangles must be started 
 /* Custom Rectangles Based Component. */
 function Credits(props){
     return(
-        <R t {...pass(props)}>
+        <R t rna={props.rna}>
             <C s={"70px"}> 
                 <div style={{fontFamily:"monospace"}}>
                     <a href = "https://alextselegidis.com/...">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
@@ -278,7 +278,7 @@ Here, the problem is solved by encapsulating the div element in a R component.
 | Component      | Uses                                                        |
 | -------------- | ----------------------------------------------------------- |
 | **Content(C)** | Rectangle sub class with easy to position internal content. |
-| **Input(T)**   | Content sub class that is a Minimalist text entry field.    |
+| **Input(T)**   | Content(C) sub class that is a Minimalist text entry field. |
 
 | Content (C) Attributes            | Effect                                     |
 | --------------------------------- | ------------------------------------------ |
