@@ -125,17 +125,28 @@ function R(props) {
 function T(props) {
   return (
     <C p="0px 15px 0px 15px" rna={props.rna}>
-      <textarea className={"R " + props.theme} style={{ paddingTop: "18px", height: "100%", width: "100%", resize: "none" }} placeholder={props.children}></textarea>
+      <textarea className={"R " + props.rna.theme} style={{ paddingTop: "18px", height: "100%", width: "100%", resize: "none" }} placeholder={props.children}></textarea>
     </C>
   )
+}
+
+function pass(props) {
+  const objectMap = (obj, fn) =>
+    Object.fromEntries(
+      Object.entries(obj).map(
+        ([k, v], i) => [k, fn(v, k, i)]
+      )
+    )
+  return objectMap(props, v => v === true ? "true" : (v === false ? "false" : v))
 }
 
 function C(props) {
   const ha = props.ha ? props.ha : "left";
   const va = props.va ? props.va : "center";
   const p = props.p ? props.p : "0px 0px 0px 15px";
+  console.log(props)
   return (
-    <R rna={props.rna}>
+    <R {...pass(props)}>
       <R ns={props.ns} tel t h={props.h}>
         <div style={{ display: "flex", height: "100%" }}>
           <div style={{ display: "flex", alignItems: va, width: "100%", justifyContent: ha, padding: p }}>
