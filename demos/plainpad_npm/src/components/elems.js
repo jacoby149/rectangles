@@ -1,3 +1,5 @@
+import {R,C} from 'rectangles-npm'
+
 /* The credit/link to the original Plain Pad project */
 function Credits({rna}){
     return(
@@ -68,7 +70,7 @@ function CC(props){
 /* For Custom Rectangle subclasses, make sure to pass props.ps through. */
 function ListItem(props){
     return (
-        <CC h s={"70px"} {...pass(props)}>
+        <CC h s={"70px"} rna={props.rna}>
             {props.children}
         </CC>
     )

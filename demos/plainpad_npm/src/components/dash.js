@@ -1,7 +1,7 @@
 import React from 'react';
 import {R,C,T} from 'rectangles-npm'
-import {Credits,Branding,Icon,CC,ListItem} from 'elems'
-import {D} from 'demotable'
+import {Credits,Branding,Icon,CC,ListItem} from './elems'
+import {D} from './demotable'
 
 /* Plain Pad app made of entirely rectangles.js components */
 function Dash(){

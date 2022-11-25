@@ -21,7 +21,7 @@ if (r) React = r;
 function R(props) {
 
   /* concatenate dictionaries */
-  function concatDict(x, y) {
+  function a(x, y) {
     return { ...x, ...y };
   }
 
@@ -216,4 +216,4 @@ function startRectangles(root) {
  * Exports
  ************/
 
-export { pass, R, C, T, startRectangles };
+export { R, C, T, startRectangles };

@@ -1,6 +1,6 @@
 import React from 'react';
 import {R,C,T} from 'rectangles-npm'
-import {Note,Credits,Branding,Icon} from 'elems'
+import {Note,Credits,Branding,Icon} from './elems'
 
 /* Plain Pad app made of entirely rectangles.js components */
 function Plainpad(){
