@@ -54,7 +54,7 @@ function R(props) {
 
   /* rectangle vertical or horizontally free axis */
   /* if v is true, rect. is free on the vertical axis. */
-  const v = (!props.rna.parentAxis ||
+  const v = (!props.rna || !props.rna.parentAxis ||
     props.rna.parentAxis == "top" ||
     props.rna.parentAxis == "bottom");
 
@@ -70,6 +70,10 @@ function R(props) {
     else { style = a(style, { width: s, height: "100%" }); }
   }
 
+  /* determine the theme */
+  const theme = props.theme ? props.theme :
+  (props.rna && props.rna.theme) ? props.rna.theme : ""
+
   /* pass float orientation to children */
   const updatedChildren = React.Children.map(
     props.children,
@@ -79,7 +83,7 @@ function R(props) {
         /* properties are available in props.rna of child components */
         rna: {
           parentAxis: side,
-          theme: props.theme
+          theme: theme
         }
       });
     }
@@ -91,17 +95,17 @@ function R(props) {
   }
 
   /* setting classname controlled vars */
-  const isTel = props.tel ? "tel " : "nottel ";
-  const isHover = props.h ? "h " : "";
-  const ismc = props.mc ? "mc " : "";
-  const ismsc = props.msc ? "msc " : "";
-  const root = props.root ? "root " : "";
-  const borders = (bb ? "bb " : "") + (bt ? "bt " : "") + (bl ? "bl " : "") + (br ? "br " : "");
-  const theme = props.theme ? `${props.theme} ` :
-    (props.rna && props.rna.theme) ? `${props.rna.theme} ` : ""
-  
+  /* theme is set above since it is inherited */
+  const isTel = props.tel ? "tel" : "nottel";
+  const isHover = props.h ? "h" : "";
+  const ismc = props.mc ? "mc" : "";
+  const ismsc = props.msc ? "msc" : "";
+  const root = props.root ? "root" : "";
+  const borders = (bb ? "bb" : "") + (bt ? "bt" : "") + (bl ? "bl" : "") + (br ? "br" : "");
+
   /* using the above vars to set the classname */
-  const className = "R " + root + theme + isTel + isHover + ismc + ismsc + borders + props.className;
+  const className = `R ${root} ${theme} ${isTel} \
+      ${isHover} ${ismc} ${ismsc} ${borders} ${props.className}`
 
   /* the result */
   return (
@@ -118,15 +122,15 @@ function R(props) {
  *  Derivative Components
  *************************/
 
- function T(props) {
+function T(props) {
   return (
-    <C p="0px 15px 0px 15px" rna = {props.rna}>
+    <C p="0px 15px 0px 15px" rna={props.rna}>
       <textarea className={"R " + props.theme} style={{ paddingTop: "18px", height: "100%", width: "100%", resize: "none" }} placeholder={props.children}></textarea>
     </C>
   )
 }
 
-function C({props}) {
+function C({ props }) {
   const ha = props.ha ? props.ha : "left";
   const va = props.va ? props.va : "center";
   const p = props.p ? props.p : "0px 0px 0px 15px";
