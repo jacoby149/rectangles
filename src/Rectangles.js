@@ -130,14 +130,14 @@ function T(props) {
   )
 }
 
-function C({ props }) {
+function C(props) {
   const ha = props.ha ? props.ha : "left";
   const va = props.va ? props.va : "center";
   const p = props.p ? props.p : "0px 0px 0px 15px";
   return (
     <R rna={props.rna}>
       <R ns={props.ns} tel t h={props.h}>
-        <div {...pass(props)} style={{ display: "flex", height: "100%" }}>
+        <div style={{ display: "flex", height: "100%" }}>
           <div style={{ display: "flex", alignItems: va, width: "100%", justifyContent: ha, padding: p }}>
             {props.children}
           </div>
