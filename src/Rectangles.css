@@ -6,21 +6,21 @@ html::-webkit-scrollbar {
 /* firefox */
 html {
   scrollbar-width: none;
-  height: 100vh;
+  height:100%;
 }
 
 body {
   padding: 0;
   margin: 0;
   background-color: #000000;
+  height:100%
 }
 
 #root {
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
-  min-height: -webkit-fill-available;
+  height:100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -53,7 +53,7 @@ body {
 
 .R.root {
   width: 100%;
-  height: 100%;
+  height:100%;
 }
 
 .R::-webkit-scrollbar {
