@@ -22,9 +22,8 @@ function Plainpad(){
 
     /* The App Component */
     return (
-        <R root t bt bb br bl theme={theme}>
+        <R root bb bt br bl t theme={theme}>
         {/* This is the root rectangle ^^^ */}
-
 
             {/* Top Pane */}
             <R l bb s={"70px"} >
@@ -67,7 +66,7 @@ function Plainpad(){
 
                 
             </R>
-        </R>
+            </R>
     )
 }
 
