@@ -61,18 +61,36 @@ body {
   /* width of the entire scrollbar */
 }
 
-.R::-webkit-scrollbar-track {
-  background: #222222;
-  /* color of the tracking area */
+.R.light::-webkit-scrollbar-track {
+    background: #ffffff;
+    /* color of the tracking area */
 }
 
-.R::-webkit-scrollbar-thumb {
-  background-color: black;
-  /* color of the scroll thumb */
-  border-radius: 20px;
-  /* roundness of the scroll thumb */
-  border: 1px solid #222222;
-  /* creates padding around scroll thumb */
+.R.light::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 1px solid #666666;
+    /* creates padding around scroll thumb */
+}
+
+.R.dark::-webkit-scrollbar-track {
+    background: #151515;
+    /* color of the tracking area */
+}
+
+.R.dark::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 1px solid #555555;
+    /* creates padding around scroll thumb */
+}
+
+.R.dark input {
+    color:white;
 }
 
 .R.brick {

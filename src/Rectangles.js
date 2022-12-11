@@ -118,7 +118,9 @@ function R(props) {
   return (
     <div childfloat={side}
       className={className}
-      style={{ ...style, ...props.style }}>
+      style={{ ...style, ...props.style }}
+      dangerouslySetInnerHTML={props.dangerouslySetInnerHTML}
+      >
       {updatedChildren}
 
     </div>
@@ -164,7 +166,7 @@ function initTelescope() {
   // recursively adjust the webpage based on window size change
   telescope.telescope = function (div) {
     const children = [...Array.from(div.childNodes)].filter((e) =>{
-      return e.classList.contains("R")}
+      return e.classList && e.classList.contains("R")}
     );
     const tel = [...children].filter((e) => e.classList.contains("tel"));
     const sibs = [...children].filter((e) => e.classList.contains("nottel"));
