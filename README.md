@@ -1,4 +1,4 @@
-# <img src="src/Rectangles.jpg" style="image-rendering:pixelated;" /> Rectangles.js Framework 
+# <img src="src/Rectangles.jpg" style="image-rendering:pixelated;" /> Rectangles.js Framework
 
 
 
@@ -10,25 +10,25 @@
 
 ## Demo 1 :
 
-### <a href="https://jacobhoffman.tk/rectangles/demos/rpc_static">https://jacobhoffman.tk/rectangles/demos/rpc_static</a>
+### <a href="https://jacobhoffman.xyz/rectangles/demos/rpc_static">https://jacobhoffman.xyz/rectangles/demos/rpc_static</a>
 
-(The following demo is inpired by the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
-
-<br>
-
-## Demo 2 :  
-
-### <a href="https://jacobhoffman.tk/rectangles/demos/plainpad_static">https://jacobhoffman.tk/rectangles/demos/plainpad_static</a>
-
-(The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
+(The following demo is inpired by the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project)
 
 <br>
 
-## Demo 3 :  
+## Demo 2 :
 
-### <a href="https://jacobhoffman.tk/rectangles/demos/plainpad_npm">https://jacobhoffman.tk/rectangles/demos/plainpad_npm</a>
+### <a href="https://jacobhoffman.xyz/rectangles/demos/plainpad_static">https://jacobhoffman.xyz/rectangles/demos/plainpad_static</a>
 
-(The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project) 
+(The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project)
+
+<br>
+
+## Demo 3 :
+
+### <a href="https://jacobhoffman.xyz/rectangles/demos/plainpad_npm">https://jacobhoffman.xyz/rectangles/demos/plainpad_npm</a>
+
+(The following demo is a copy of the UI of <a href = "https://alextselegidis.com/try/plainpad-standalone/#/notes">The PlainPad</a> project)
 
 <br>
 
@@ -36,7 +36,7 @@
 
 Rectangles is a system for designing responsive layouts for front ends. it enforces *glitch-free*, *responsive* apps.
 
-The Rectangles framework aims to decrease the number of ways to make the same layout in by enforcing strict constraints / design rules. 
+The Rectangles framework aims to decrease the number of ways to make the same layout in by enforcing strict constraints / design rules.
 
 For two people to make the same front end layout in rectangles, it is likely that they wrote the same exact code.
 
@@ -50,7 +50,7 @@ Rectangles provides the ingredients to run apps as Babel in browser transpiled r
 
 ## Local Hosting Advice For New Developers :
 
-If you are new to web development, I recommend installing python. 
+If you are new to web development, I recommend installing python.
 
 To get started, navigate to the "plainpad_static" demo
 
@@ -61,27 +61,27 @@ cd demos/plainpad_browser_transpile
 python -m http.server
 ```
 
-Then, go to localhost:8000 in your browser to view the project. 
+Then, go to localhost:8000 in your browser to view the project.
 
 Use (Ctrl + Shift + R) to refresh the browser on code changes.
 
 
 
-## Static Rectangles vs. npm built Rectangles 
+## Static Rectangles vs. npm built Rectangles
 
-**npm built (via. npx create-react-app) [demos/plainpad-npm]** : 
+**npm built (via. npx create-react-app) [demos/plainpad-npm]** :
 
 1. JSX components are imported the standard way as is done in a react project.
 
 *VS.*
 
-**static [demos/plainpad-static]** : 
+**static [demos/plainpad-static]** :
 
 1. Rectangles.css is attached to the index.html file as a link tag.
-2. loadComp.js is attached to the index.html as a script tag. 
+2. loadComp.js is attached to the index.html as a script tag.
 3. JSX components are loaded in at the bottom of the index.html file with the loadComp function.
 
- 
+
 
 ## Explaining Rectangles
 
@@ -91,7 +91,7 @@ The main rectangle (root rectangle) is a viewport sized Rectangle with the root 
 
 #### relationships of rectangles
 
-rectangles can have 1 parent [meaning they are the child of that parent] 
+rectangles can have 1 parent [meaning they are the child of that parent]
 
 rectangles can have multiple siblings.
 
@@ -101,7 +101,7 @@ rectangles can have at most one telescopic sibling.
 
 ## Example [dummy demo]
 
-https://jacobhoffman.tk/rectangles/demos/dummy_static
+https://jacobhoffman.xyz/rectangles/demos/dummy_static
 
 ```jsx
 /* index.js */
@@ -117,14 +117,14 @@ function App() {
                 </R>
                 <R br tel>
                 <b> C </b>
-                </R> 
+                </R>
                 <R s={"60px"}>
                 <b> D </b>
                 </R>
             </R>
             <R>
             <b> E </b>
-            </R> 
+            </R>
         </R>
     )
 }
@@ -134,7 +134,7 @@ startRectangles(document.getElementById("root")); // rectangles must be started 
 
 ##### root
 
-* In the above example, A and E are children of the root rectangle. 
+* In the above example, A and E are children of the root rectangle.
 
 * A and E are siblings.
 
@@ -193,7 +193,7 @@ startRectangles(document.getElementById("root")); // rectangles must be started 
 function Credits(props){
     return(
         <R t {...pass(props)}>
-            <C s={"70px"}> 
+            <C s={"70px"}>
                 <div style={{fontFamily:"monospace"}}>
                     <a href = "https://alextselegidis.com/...">Plain Pad</a>&nbsp;UI Copy in Rectangles.js
                 </div>
@@ -203,10 +203,10 @@ function Credits(props){
 }
 ```
 
-**Rectangles Inheritance** 
+**Rectangles Inheritance**
 
 1. Routinely, developers will want to make custom rectangles components.
-2. These components need to be able to pass through inheritance of : 
+2. These components need to be able to pass through inheritance of :
    * Themes
    * Locked Dimensions
 3. Developers must pass inheritance manually through the ...pass(props) pattern.
@@ -214,7 +214,7 @@ function Credits(props){
 
 
 
-## Things You Shouldn't Do 
+## Things You Shouldn't Do
 
 ```jsx
 // Do NOT do this...
@@ -243,12 +243,12 @@ Rectangles based components should NOT be siblings with regular components.
 Here, the problem is solved by encapsulating the div element in a R component.
 
 1. the div is made an only child.
-2. Rectangles based components are siblings with each other. 
+2. Rectangles based components are siblings with each other.
 3. There are no Rectangles based components that are siblings with regular components.
 
 
 
-## Attributes special to the Rectangle(R) Component. 
+## Attributes special to the Rectangle(R) Component.
 
 | Attributes             | Effect                                                       |
 | :--------------------- | ------------------------------------------------------------ |
